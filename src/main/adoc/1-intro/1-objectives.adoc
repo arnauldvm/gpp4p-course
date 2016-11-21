@@ -1,0 +1,37 @@
+// build_options: 
+Java Performance Tuning - Objectives
+====================================
+Arnauld Van Muysewinkel <avm@pendragon.be>
+v0.1, 26-Oct-2015: Draft version
+:backend: slidy
+//:theme: volnitsky
+:data-uri:
+:copyright: Creative-Commons-Zero (Arnauld Van Muysewinkel)
+
+
+Content
+-------
+
+* objectives of the course
+
+_(link:../0-extra/1-training_plan.html#_presentations[back to course plan])_
+
+
+Objectives of the course
+------------------------
+
+* know how the design of the JVM (and the OS) influence the performance of an application
+* be able to design efficient, representative performance tests
+* use performance tests to detect bottlenecks before they reach the production system
+* find origin of performance issues
+* find evidences of the origin of performance issues
+* avoid spending effort on useless fixes (avoid trial and error)
+
+
+That's all folks!
+-----------------
+
+[cols="^",grid="none",frame="none"]
+|=====
+|image:../thats-all-folks.png[link="#(1)"]
+|=====
