@@ -1,8 +1,8 @@
 // build_options: 
-Java Performance Tuning - Training Plan
-=======================================
+Good Programming Practices for Performance - Training Plan
+==========================================================
 Arnauld Van Muysewinkel <avm@pendragon.be>
-v1.0, 15-Nov-2015: First complete version
+v0.1, 21-Nov-2016: First complete version
 :backend: slidy
 //:theme: volnitsky
 :data-uri:
@@ -10,104 +10,17 @@ v1.0, 15-Nov-2015: First complete version
 :br: pass:[<br>]
 
 
-Day 1 - AM
-----------
-
-*****
-Writing performance tests
-*****
-
-* link:../1-intro/0-introduction.html#_introduction_to_the_course[Introduction]
-* _link:../1-intro/w0-install.html#_content[Workshop 0: install the training toolsuite]_
-
-* link:../2-benchmark/1-benchmark_design.html#_rtri_anatomy_of_a_test[Designing your benchmarks]: Anatomy of a test
-
-* link:../2-benchmark/2-benchmark_tool.html#_content[Benchmarking tools]:
-** Basics (Injector, Market overview, Threading model, Back-pressure)
-** Introduction to JMeter
-
-* _link:../2-benchmark/w1-first_benchmark.html#_content[Workshop 1: write your first performance tests]_
-
-* link:../4-process/0-perf_test_process.html#_content[Performance testing process]
-
-Day 1 - PM
-----------
-
-*****
-Writing performance tests (cont'd)
-*****
-
-* link:../2-benchmark/1-benchmark_design.html#_rtri_introduction[Designing your benchmarks]:
-** Planning your test
-** Load profiles
-** Metrics
-
-* link:../2-benchmark/2-benchmark_tool.html#_jmeter_expressions_amp_functions[Benchmarking tools]:
-** JMeter: expressions & functions, shell
-** becoming en expert: randomization, data analysis, mock-ups
-
-* _link:../2-benchmark/w2-wrapup_benchmark.html#_content[Workshop 2: wrap up your performance tests]_
+TODO
 
 
-Day 2 - AM
-----------
+JPT
+---
 
-*****
-Investigating performance issues
-*****
+"Java Performance Tuning"
 
-* Performance Diagnostic Model (PDM): Introduction{br}&nbsp;
-* &target; Reminder about OSes internals (scheduling...)
-* PDM: Layer 1 (OS)
-* OS Monitoring tools
-* _Workshop 3 (interactive): PDM Layer 1 (OS) in practice_
-
-
-Day 2 - PM
-----------
-
-*****
-Investigating performance issues (cont'd)
-*****
-
-* PDM: Layer 2 (JVM)
-* &target; Reminder of some JVM internals (GC, JIT...)
-* JVM Monitoring tools
-* _Workshop 4 (interactive): PDM Layer 2 (JVM) in practice_
-
-
-Day 3 - AM
-----------
-
-*****
-Investigating performance issues (cont'd)
-*****
-
-* PDM: Layer 3 (Application)
-* Application Monitoring tools
-* _Workshop 5 (interactive): PDM Layer 3 (Application) in practice_
-
-
-Extras
-------
-
-*****
-Going further
-*****
-
-If time allows:
-
-* Other analysis tools (RG, Excel, R, ELK...)
-* _Workshop 6: Using the Report Generator_
-* Introduction to Hyperion
-
-
-GPP4P
------
-
-"Good Programming Practices for Performance"
-
-* Best Practices (JSF, JPA, SQL...)
+* Performance benchmarking
+* Performance Diagnostic model
+* Performance testing process
 
 
 WPT
@@ -123,32 +36,16 @@ Presentations
 
 * link:../1-intro/0-introduction.html#_content[Introduction]
 * link:../1-intro/1-objectives.html#_content[Objectives]
-* link:../2-benchmark/1-benchmark_design.html#_content[Designing your benchmarks]
-* link:../2-benchmark/2-benchmark_tool.html#_content[Benchmarking tools]
-* link:../3-pdm/0-pdm_intro.html#_content[Performance Diagnostic Model (introduction)]
-* link:../3-pdm/1-pdm_l1-os.html#_content[PDM Layer 1: Operating System]
-* link:../3-pdm/2-pdm_l2-jvm.html#_content[PDM Layer 2: Java Virtual Machine]
-* link:../3-pdm/3-pdm_l3-app.html#_content[PDM Layer 3: Application]
-* link:../4-process/0-perf_test_process.html#_content[Performance Testing Process]
-* link:../5-analysis/1-analysis_tools.html#_content[Analysis Tools]
+* link:../0-extra/4-best_practices.html#_content[Best Practices]
 
 
 Workshops
 ---------
 
-* link:../1-intro/w0-install.html#_content[Install the training toolsuite]
-* link:../2-benchmark/w1-first_benchmark.html#_content[First performance test]
-* link:../2-benchmark/w2-wrapup_benchmark.html#_content[Wrap-up the performance test]
-* link:../3-pdm/w3-dominant_os.html#_content[PDM Layer 1 (OS) in practice]
-* link:../3-pdm/w4-dominant_jvm.html#_content[PDM Layer 2 (JVM) in practice]
-* link:../3-pdm/w5-dominant_app.html#_content[PDM Layer 3 (Application) in practice]
+* 
 
 
 Extras
 ------
 
-* link:../0-extra/0-course_description.html#_content[Course Description]
-* link:../0-extra/1-training_plan.html#_content[Course Plan]
-* link:../0-extra/2-internals_os.html#_content[Operating Systems Internals]
-* link:../0-extra/3-internals_jvm.html#_content[Java VM Internals]
-* link:../0-extra/4-best_practices.html#_content[Best Practices]
+* 

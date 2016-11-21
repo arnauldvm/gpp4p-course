@@ -1,2 +1,2 @@
-# jpt-course
-Java Performance Training: Course
+# gpp4p-course
+Good Programming Practices for Performance: Course

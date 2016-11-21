@@ -1,7 +1,9 @@
-Java Performance Tuning - Course description
-============================================
+Good Programming Practices for Performance - Course description
+===============================================================
 Arnauld Van Muysewinkel <avm@pendragon.be>
-v1.0, 26-Nov-2014: Initial version, adapted for public use
+v0.1, 21-Nov-2016: Initial version, adapted for public use
+
+TODO
 
 Target audience
 ---------------
