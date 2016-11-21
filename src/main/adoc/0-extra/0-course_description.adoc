@@ -3,62 +3,44 @@ Good Programming Practices for Performance - Course description
 Arnauld Van Muysewinkel <avm@pendragon.be>
 v0.1, 21-Nov-2016: Initial version, adapted for public use
 
-TODO
 
 Target audience
 ---------------
 
-Architects, Senior developers (, Jr developers), DevOps
+Architects, Developers
 
 Prerequisites
 -------------
 
-* Required: Good knowledge of Java language
-* Recommended: Good Knowledge of JEE
-* Recommended: Knowledge of Operating Systems internals
-* Recommended: Knowledge of JVM internals
-* Recommended: Knowledge of TCP/IP internals
+* Minimum 2 years of experience in developing Java enterprise applications
 
 Training objectives
 -------------------
 
-[quote, (in Kodewerk)]
-_____
-. Quickly identify the root causes of poor performance in your applications
-. Eliminate conditions that will prevent you from finding performance bottlenecks
-. Find critical supportive evidence before deciding on a potentially expensive course of action
-. Find performance issues before they make their escape into your production system
-_____
+Provide good programming practices for efficient and scalable applications. 
+The development of this skill will improve the quality of the code produced.
 
 Course content
 --------------
 
- * Reminder of some JVM internals
- * Performance testing methodology, benchmarking tools
- * Performance analysis methodology, diagnostic model, monitoring tools, profiling
- ** threading model
- ** memory usage (GC)
- ** better DB performance through good usage of JPA
- ** algorithmic complexity
- ** other causes of performance issues
- * Performance testing process
+* Java SE – Optimization & Best Practices
+* Database – Optimization & Best Practices
+** good usage of JPA
+** good usage of SQL
+* JEE – Optimization & Best Practices
+* Micro-benchmarking
 
 Skills acquired during the training
 -----------------------------------
 
- - Better understanding of root causes of performance issues
- - How to diagnose the source of a performance issue
- - Avoid introducing patterns that jeopardize performance
+ - Implement on project the good practices addressed during the training
+ - Recognize code-related performance issues on existing projects.
 
 Out-of-scope
 ------------
 
- - DOT.net performance
- - Performance of non-relational databases
- - Performance of real-time operating systems
- - Performance of non-JVM based languages
- - Perl Internals
- - R detailed design
+ - Performance analysis and benchmarking tools (see 'T163 - Java Performance Tuning' (JPT) training).
+ - Web front-end performance tuning (see 'T165 - Web Performance Tuning' (WPT) training).
 
 Approach
 --------
