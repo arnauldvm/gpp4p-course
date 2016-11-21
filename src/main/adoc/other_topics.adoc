@@ -1,0 +1,58 @@
+http://www.javaperformancetuning.com/tips/rawtips.shtml
+
+* process (see JPT)
+
+* test in real-life conditions (DB size, # simultaneous users, server sizing...)
+
+* Most frequent sources of performance issues
+
+** memory, objects lifecycle
+*** useless allocation/deallocation: try to re-use objects -> consider using object pools
+*** big objects in memory (e.g. file transfer -> use streaming)
+*** chase memory leaks
+*** use SoftReference for long-lived objects
+*** difficult: balance memory used vs. performance
+**** E.g.: reduce session scope as much as possible => more DB requests!
+*** prefer local variables over class variables
+*** don't +System.gc()+
+
+** persistence, database
+*** avoid useless fetches from DB (beware of ORM)
+*** optimize your JPA model, optimize your SQL calls
+ http://howtodoinjava.com/core-java/jdbc/best-practices-to-improve-jdbc-performance/
+ http://www.javaperformancetuning.com/tips/jdbc_prepared.shtml
+ http://www.javaperformancetuning.com/tips/rawtips.shtml >> http://www.as400.ibm.com/developer/java/topics/jdbctips.html
+*** use batch mode when applicable
+*** avoid multiple joins (highly non-linear!)
+*** Use optimistic transactions
+
+** remote services
+*** -> use caches for slow services
+*** set your timeouts!
+
+** disk I/Os
+*** *all* logging frameworks are bad performance-wise -> reduce logging to a strict minimum when in PROD
+
+** threads contentions
+ http://www.javaperformancetuning.com/tips/synchronization.shtml
+*** avoid synchronization as much as possible -> consider "Lock-Free (or Lockless) Programming"
+ http://preshing.com/20120612/an-introduction-to-lock-free-programming/
+**** never use +synchronized(this)+
+*** beware of Concurrent structures
+*** avoid using thread safe classes when not required (e.g. prefer StringBuilder over StringBuffer)!
+*** *never* use "exactly-once" QoS for messaging, use:
+**** at-most-once if you can afford losing messages
+**** at-least-once (+ message numbering) otherwise
+
+* Less frequest sources of performance issues
+
+** CPU
+*** don't use exceptions as return values!
+*** choose your collections implementations carefully
+*** choose your algorithms carefully (e.g. sort...)
+*** use market proof algorithms implementations
+*** know how your CPU work (e.g. cache levels)
+*** favor inlining by the JIT (...)
+*** replace Lists and Strings by arrays
+*** cryptography is slow
+*** XML parsing is slow
