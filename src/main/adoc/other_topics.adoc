@@ -12,6 +12,9 @@ image:typical_latencies/pydata-paris-2015-closing-keynote-francesc-alted-16-638.
 * performance improvement process (see JPT)
 ** no premature optimization
 ** have a performance objective
+** concentrate of the 20% of the app that is responsible for 80% of the load
+** one issue often hides other issues
+** first actions might not show any improvement. Yet, don't despair!
 ** test in real-life conditions (DB size, # simultaneous users, server sizing...)
 ** OS contention, then GC issues, then code optimization
 ** ...
@@ -39,6 +42,7 @@ image:typical_latencies/pydata-paris-2015-closing-keynote-francesc-alted-16-638.
  http://howtodoinjava.com/core-java/jdbc/best-practices-to-improve-jdbc-performance/
  http://www.javaperformancetuning.com/tips/jdbc_prepared.shtml
  http://www.javaperformancetuning.com/tips/rawtips.shtml >> http://www.as400.ibm.com/developer/java/topics/jdbctips.html
+*** Use +PreparedStatement+, parameters *must* be injected through bind variables
 *** use batch mode when applicable
 *** avoid multiple joins (highly non-linear!)
 *** Use optimistic transactions
@@ -70,6 +74,9 @@ image:typical_latencies/pydata-paris-2015-closing-keynote-francesc-alted-16-638.
 **** at-most-once if you can afford losing messages
 **** at-least-once (+ message numbering) otherwise
 *** use async I/O if you can
+
+** architecture
+*** prefer many small servers to few big servers
 
 * Less frequent sources of performance issues
 
@@ -127,7 +134,7 @@ image:typical_latencies/pydata-paris-2015-closing-keynote-francesc-alted-16-638.
 *** replace Lists and Strings by arrays
 *** cryptography is slow
 *** XML parsing is slow
-*** serializin/deserializing is slow
+*** serializing/deserializing is slow
 *** creating a regexp is slow
 *** prefer StringBuilder over String.format
 *** avoid polling
