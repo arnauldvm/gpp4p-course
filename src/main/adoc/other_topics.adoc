@@ -138,6 +138,7 @@ image:typical_latencies/pydata-paris-2015-closing-keynote-francesc-alted-16-638.
 *** creating a regexp is slow
 *** prefer StringBuilder over String.format
 *** avoid polling
+*** getters/setters may hurt (if not inlined)
 
 * Out-of-scope
 ** java fat clients performance (AWT, Swing, JavaFX...)
