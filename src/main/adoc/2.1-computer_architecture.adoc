@@ -14,9 +14,22 @@ ifdef::env-build[:icons: font]
 Content
 -------
 
+* <<_topics,Topics>>
 
 _(link:0.1-training_plan.{extension}#_preamble[back to plan])_
 
+
+Topics
+------
+
+https://www.youtube.com/watch?v=OFgxAFdxYAQ
+ http://www.azulsystems.com/events/javaone_2009/session/2009_J1_HardwareCrashCourse.pdf
+
+* Von Neuman (abstraction, not real anymore)
+* real architecture (multi-core, instructions pipelines, cache levels...)
+* typical latencies
+image:typical_latencies/pydata-paris-2015-closing-keynote-francesc-alted-16-638.jpg[]
+ https://gist.github.com/hellerbarde/2843375
 
 :numbered!:
 That's all folks!
