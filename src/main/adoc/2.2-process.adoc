@@ -14,9 +14,24 @@ ifdef::env-build[:icons: font]
 Content
 -------
 
+* <<_other_topics,Other topics>>
 
 _(link:0.1-training_plan.{extension}#_preamble[back to plan])_
 
+
+Other topics
+------------
+
+Performance improvement process (see JPT)
+
+* no premature optimization
+* have a performance objective
+* concentrate of the 20% of the app that is responsible for 80% of the load
+* one issue often hides other issues
+* first actions might not show any improvement. Yet, don't despair!
+* test in real-life conditions (DB size, # simultaneous users, server sizing...)
+* OS contention, then GC issues, then code optimization
+* ...
 
 :numbered!:
 That's all folks!
