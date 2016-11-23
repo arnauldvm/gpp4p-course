@@ -48,7 +48,7 @@ Other courses
 "Java Performance Tuning"
 
 * Performance benchmarking
-* Performance Diagnostic model
+* Performance Diagnostic Model
 * Performance testing process
 
 "Web Performance Tuning"
