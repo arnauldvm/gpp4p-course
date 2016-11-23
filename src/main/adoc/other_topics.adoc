@@ -24,6 +24,3 @@ image:typical_latencies/pydata-paris-2015-closing-keynote-francesc-alted-16-638.
 ** ...
 
 * Most frequent sources of performance issues
-
-** architecture
-*** prefer many small servers to few big servers

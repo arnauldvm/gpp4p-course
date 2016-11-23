@@ -14,8 +14,15 @@ ifdef::env-build[:icons: font]
 Content
 -------
 
+* <<_other_advices,Other advices>>
 
 _(link:0.1-training_plan.{extension}#_best_practices[back to plan])_
+
+
+Other advices
+-------------
+
+* prefer many small servers to few big servers
 
 
 :numbered!:
