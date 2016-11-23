@@ -21,7 +21,6 @@ Content
 * <<_jsf_ui_debug,JSF>>
 * <<_ejb,EJB>>
 * <<_sessions,Sessions>>
-* <<_concurrency,Concurrency>>
 * <<_caching,Caching>>
 * <<_conclusion,Conclusion>>
 
@@ -156,39 +155,6 @@ NOTE: Sessions must be serializable:
 * Use DTO's
 
 Actually, the potential issues are the same as for JSF ViewContext.
-
-
-Concurrency
------------
-
-NOTE: Do not use _any_ concurrency control mechanism
-
-like:
-
-* synchronized keyword
-* ConcurrentHashMap
-* ThreadLocal
-* etc.
-
-
-Concurrency
------------
-
-*****
-.Why is thread creation and management disallowed?*
-[quote, "EJB Restrictions" (http://www.oracle.com/technetwork/java/restrictions-142267.html)]
-_____
-The EJB specification assigns to the EJB container the responsibility
-for managing threads. Allowing enterprise bean instances to create and manage threads
-would interfere with the container's ability to control its components' lifecycle.
-Thread management is not a business function, it is an implementation detail,
-and is typically complicated and platform-specific.
-Letting the container manage threads relieves the enterprise bean developer
-of dealing with threading issues. Multithreaded applications are still possible,
-but control of multithreading is located in the container, not in the enterprise bean.
-http://www.oracle.com/technetwork/java/restrictions-142267.html[>>>]
-_____
-*****
 
 
 Caching

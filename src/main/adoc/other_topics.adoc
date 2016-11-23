@@ -53,19 +53,6 @@ image:typical_latencies/pydata-paris-2015-closing-keynote-francesc-alted-16-638.
 **** NOTE: "security logging" is *not* logging (should be called "security audit trace")
 *** generally speaking, avoid writing to disk
 
-** threads contentions
- http://www.javaperformancetuning.com/tips/synchronization.shtml
-*** avoid synchronization as much as possible -> consider "Lock-Free (or Lockless) Programming"
- http://preshing.com/20120612/an-introduction-to-lock-free-programming/
-**** never use +synchronized(this)+
-*** even using +volatile+ may be slow
-*** beware of Concurrent structures
-*** avoid using thread safe classes when not required (e.g. prefer StringBuilder over StringBuffer)!
-*** *never* use "exactly-once" QoS for messaging, use:
-**** at-most-once if you can afford losing messages
-**** at-least-once (+ message numbering) otherwise
-*** use async I/O if you can
-
 ** architecture
 *** prefer many small servers to few big servers
 
