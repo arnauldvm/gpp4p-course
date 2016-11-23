@@ -27,7 +27,7 @@ Content
 * <<_caching,Caching>>
 * <<_conclusion,Conclusion>>
 
-_(link:../0-extra/1-training_plan.html#_extras[back to plan])_
+_(link:0-training_plan.html#_extras[back to plan])_
 
 
 References
@@ -315,5 +315,5 @@ That's all folks!
 
 [cols="^",grid="none",frame="none"]
 |=====
-|image:../thats-all-folks.png[link="#(1)"]
+|image:./thats-all-folks.png[link="#(1)"]
 |=====
