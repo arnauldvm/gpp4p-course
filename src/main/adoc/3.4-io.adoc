@@ -14,8 +14,20 @@ ifdef::env-build[:icons: font]
 Content
 -------
 
+* <<_other_advices,Other advices>>
 
 _(link:0.1-training_plan.{extension}#_best_practices[back to plan])_
+
+
+Other advices
+-------------
+
+Disk I/Os
+
+* *all* logging frameworks are bad performance-wise -> reduce logging to a strict minimum when in PROD
+* prefer async logging framework
+** NOTE: "security logging" is *not* logging (should be called "security audit trace")
+* generally speaking, avoid writing to disk
 
 
 :numbered!:
