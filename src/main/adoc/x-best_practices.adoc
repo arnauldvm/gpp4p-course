@@ -310,6 +310,7 @@ WIKI_Best_Practices_for_Performance.aspx]
 image:images/Perry_The_Platypus-210x140.png[width=30] http://c.xkcd.com/random/comic/[.]
 
 
+:numbered!:
 That's all folks!
 -----------------
 

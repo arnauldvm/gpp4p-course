@@ -23,6 +23,7 @@ Introduction to the course
 TODO
 
 
+:numbered!:
 That's all folks!
 -----------------
 
