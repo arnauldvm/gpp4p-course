@@ -1,7 +1,7 @@
 Good Programming Practices for Performance - Course description
 ===============================================================
 Arnauld Van Muysewinkel <avm@pendragon.be>
-v0.1, 21-Nov-2016: Initial version, adapted for public use
+v0.1, 23-Nov-2016: Initial version, adapted for public use
 
 
 Target audience
