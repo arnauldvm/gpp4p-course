@@ -30,11 +30,5 @@ https://www.youtube.com/watch?v=OFgxAFdxYAQ
 image:typical_latencies/pydata-paris-2015-closing-keynote-francesc-alted-16-638.jpg[]
  https://gist.github.com/hellerbarde/2843375
 
-:numbered!:
-That's all folks!
------------------
 
-[cols="^",grid="none",frame="none"]
-|=====
-|image:images/thats-all-folks.png[link="#(1)"]
-|=====
+include::lastpage.adoc.include[]

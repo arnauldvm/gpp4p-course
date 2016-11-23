@@ -83,11 +83,5 @@ http://www.javaperformancetuning.com/tips/synchronization.shtml
 ** at-least-once (+ message numbering) otherwise
 * use async I/O if you can
 
-:numbered!:
-That's all folks!
------------------
 
-[cols="^",grid="none",frame="none"]
-|=====
-|image:images/thats-all-folks.png[link="#(1)"]
-|=====
+include::lastpage.adoc.include[]
