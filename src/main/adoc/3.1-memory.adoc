@@ -14,8 +14,39 @@ ifdef::env-build[:icons: font]
 Content
 -------
 
+* <<_sessions,Sessions>>
+* <<_other_advices,Other advices>>
 
 _(link:0.1-training_plan.{extension}#_best_practices[back to plan])_
+
+
+Sessions
+--------
+
+NOTE: Sessions must be serializable:
+
+* all objects under the session must be serializable (whole objects graph!)
+* avoid big objects in the session
+* Use DTO's
+
+Actually, the potential issues are the same as for JSF ViewContext.
+
+
+Other advices
+-------------
+
+* _See also https://github.com/arnauldvm/jpt-course[JPT] course_
+* useless allocation/deallocation: try to re-use objects -> consider using object pools
+* big objects in memory (e.g. file transfer -> use streaming)
+* chase memory leaks
+* use SoftReference for long-lived objects
+* difficult: balance memory used vs. performance
+** E.g.: reduce session scope as much as possible => more DB requests!
+* prefer local variables over class variables
+* don't +System.gc()+
+* prefer StringBuilder over '+' or String.format
+* allocate collections/buffers/builders with appropriate initialCapacity
+* avoid allocating objects in loops
 
 
 :numbered!:

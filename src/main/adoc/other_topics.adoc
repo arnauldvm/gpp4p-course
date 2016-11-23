@@ -25,20 +25,6 @@ image:typical_latencies/pydata-paris-2015-closing-keynote-francesc-alted-16-638.
 
 * Most frequent sources of performance issues
 
-** memory, objects lifecycle
-*** _See also JPT course_
-*** useless allocation/deallocation: try to re-use objects -> consider using object pools
-*** big objects in memory (e.g. file transfer -> use streaming)
-*** chase memory leaks
-*** use SoftReference for long-lived objects
-*** difficult: balance memory used vs. performance
-**** E.g.: reduce session scope as much as possible => more DB requests!
-*** prefer local variables over class variables
-*** don't +System.gc()+
-*** prefer StringBuilder over '+' or String.format
-*** allocate collections/buffers/builders with appropriate initialCapacity
-*** avoid allocating objects in loops
-
 ** disk I/Os
 *** *all* logging frameworks are bad performance-wise -> reduce logging to a strict minimum when in PROD
 *** prefer async logging framework

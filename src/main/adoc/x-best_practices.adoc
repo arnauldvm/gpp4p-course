@@ -18,7 +18,6 @@ Content
 * <<_references,References>>
 * <<_introduction,Introduction>>
 * <<_general_recommendations,General Recommendations>>
-* <<_sessions,Sessions>>
 * <<_conclusion,Conclusion>>
 
 _(link:0.0-training_plan.{extension}#_extras[back to plan])_
@@ -58,18 +57,6 @@ NOTE: Never, ever, use non-final static variables
 NOTE: Don't rely on default locale:
 
 no Locale.setDefault(), no Locale.getDefault(), no new formatter without passing a Locale; see jdss wiki
-
-
-Sessions
---------
-
-NOTE: Sessions must be serializable:
-
-* all objects under the session must be serializable (whole objects graph!)
-* avoid big objects in the session
-* Use DTO's
-
-Actually, the potential issues are the same as for JSF ViewContext.
 
 
 Conclusion
