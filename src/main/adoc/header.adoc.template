@@ -9,8 +9,6 @@ ifdef::env-build[:icons: font]
 :extension: adoc
 //extension may be overriden by compile.sh
 :copyright: Creative-Commons-Zero (Arnauld Van Muysewinkel)
-//:br: pass:[<br>]
-//:tld: pass:[~]
 
 Content
 -------
