@@ -22,7 +22,7 @@ Introduction
 Preamble
 --------
 
-* link:2.1-computer_architecture.{extension}#_content[Computer architecture]
+* link:2.1-hardware.{extension}#_content[Computer architecture]
 * link:2.2-process.{extension}#_content[Performance improvement process]
 
 
