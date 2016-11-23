@@ -39,19 +39,6 @@ image:typical_latencies/pydata-paris-2015-closing-keynote-francesc-alted-16-638.
 *** allocate collections/buffers/builders with appropriate initialCapacity
 *** avoid allocating objects in loops
 
-** persistence, database
-*** avoid useless fetches from DB (beware of ORM)
-*** pagination
-*** optimize your JPA model, optimize your SQL calls
- http://howtodoinjava.com/core-java/jdbc/best-practices-to-improve-jdbc-performance/
- http://www.javaperformancetuning.com/tips/jdbc_prepared.shtml
- http://www.javaperformancetuning.com/tips/rawtips.shtml >> http://www.as400.ibm.com/developer/java/topics/jdbctips.html
-*** Use +PreparedStatement+, parameters *must* be injected through bind variables
-*** use batch mode when applicable
-*** avoid multiple joins (highly non-linear!)
-*** Use optimistic transactions
-*** no autocommit, but keep transactions short (group all DB requests is possible)
-
 ** remote services
 *** -> use caches for slow services
 *** set your timeouts!
