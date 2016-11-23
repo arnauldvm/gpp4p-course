@@ -1,7 +1,0 @@
-:data-uri:
-ifdef::env-build[:icons: font]
-
-
-
-
-* Most frequent sources of performance issues
