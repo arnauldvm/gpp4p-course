@@ -36,6 +36,7 @@ Best practices
 * link:3.5-contentions.{extension}#_content[Contentions (threads, locks...)]
 * link:3.6-cpu.{extension}#_content[CPU]
 * link:3.7-architecture.{extension}#_content[Architecture] (?)
+* link:3.8-presentation.{extension}#_content[Presentation (JSF)]
 
 
 Workshop
