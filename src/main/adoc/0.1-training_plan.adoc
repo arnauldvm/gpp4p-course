@@ -47,13 +47,13 @@ Workshop
 Other courses
 -------------
 
-"Java Performance Tuning"
+"{nbsp}https://github.com/arnauldvm/jpt-course[Java Performance Tuning]{nbsp}"
 
 * Performance benchmarking
 * Performance Diagnostic Model
 * Performance testing process
 
-"Web Performance Tuning"
+"{nbsp}https://github.com/arnauldvm/wpt-course[Web Performance Tuning]{nbsp}"
 
 * Web front-end performance
 
