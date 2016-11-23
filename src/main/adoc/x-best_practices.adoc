@@ -17,7 +17,6 @@ Content
 
 * <<_references,References>>
 * <<_introduction,Introduction>>
-* <<_general_recommendations,General Recommendations>>
 * <<_conclusion,Conclusion>>
 
 _(link:0.0-training_plan.{extension}#_extras[back to plan])_
@@ -44,19 +43,6 @@ These recommendations apply to JEE development.
 *****
 IMPORTANT: Do-not-reinvent-the-wheel
 *****
-
-
-General recommendations
------------------------
-
-NOTE: Never, ever, use non-final static variables
-
-(Note: constants, loggers must be final static variables)
-
-
-NOTE: Don't rely on default locale:
-
-no Locale.setDefault(), no Locale.getDefault(), no new formatter without passing a Locale; see jdss wiki
 
 
 Conclusion

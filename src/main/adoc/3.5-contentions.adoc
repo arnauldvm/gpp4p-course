@@ -14,10 +14,24 @@ ifdef::env-build[:icons: font]
 Content
 -------
 
+* <<_general_recommendations,General Recommendations>>
 * <<jee,Thread management in Java EE>>
 * <<_other_advices,Other advices>>
 
 _(link:0.1-training_plan.{extension}#_best_practices[back to plan])_
+
+
+General recommendations
+-----------------------
+
+NOTE: Never, ever, use non-final static variables
+
+(Note: constants, loggers must be final static variables)
+
+
+NOTE: Don't rely on default locale:
+
+no Locale.setDefault(), no Locale.getDefault(), no new formatter without passing a Locale; see jdss wiki
 
 
 [[jee]]
