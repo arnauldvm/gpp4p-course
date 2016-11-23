@@ -39,14 +39,6 @@ image:typical_latencies/pydata-paris-2015-closing-keynote-francesc-alted-16-638.
 *** allocate collections/buffers/builders with appropriate initialCapacity
 *** avoid allocating objects in loops
 
-** remote services
-*** -> use caches for slow services
-*** set your timeouts!
-*** use async services if you can
-*** use connections/clients pool
-*** consider using a circuit breaker
- https://en.wikipedia.org/wiki/Circuit_breaker_design_pattern
-
 ** disk I/Os
 *** *all* logging frameworks are bad performance-wise -> reduce logging to a strict minimum when in PROD
 *** prefer async logging framework

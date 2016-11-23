@@ -18,9 +18,7 @@ Content
 * <<_references,References>>
 * <<_introduction,Introduction>>
 * <<_general_recommendations,General Recommendations>>
-* <<_ejb,EJB>>
 * <<_sessions,Sessions>>
-* <<_caching,Caching>>
 * <<_conclusion,Conclusion>>
 
 _(link:0.0-training_plan.{extension}#_extras[back to plan])_
@@ -62,15 +60,6 @@ NOTE: Don't rely on default locale:
 no Locale.setDefault(), no Locale.getDefault(), no new formatter without passing a Locale; see jdss wiki
 
 
-EJB
----
-
-NOTE: Don't use Remote EJB if not needed (performance impact!)
-
-* Remote EJB entails serialization/deserialization
-* Prefer local EJB
-
-
 Sessions
 --------
 
@@ -81,19 +70,6 @@ NOTE: Sessions must be serializable:
 * Use DTO's
 
 Actually, the potential issues are the same as for JSF ViewContext.
-
-
-Caching
--------
-
-NOTE: Avoid using any custom-made cache.
-
-* There are potential issues with caches (stuck threads, memory leaks)
-* Use only recommended out-of-the-shelf solution (RB has approved usage of Inifinispan for local caches)
-* Discuss it with review board
-* Do not use a HashMap to share information between several threads:
-** you cannot make it synchronized (see above, <<_concurrency,Concurrency>>)
-** and, when it's not synchronized, there is a risk of infinite loop with Java version < 8 (http://bugs.java.com/view_bug.do?bug_id=7027300) (see also, for example, https://dzone.com/articles/java-7-hashmap-vs)
 
 
 Conclusion

@@ -14,8 +14,44 @@ ifdef::env-build[:icons: font]
 Content
 -------
 
+* <<_ejb,EJB>>
+* <<_other_advices,Other advices>>
+* <<_caching,Caching>>
 
 _(link:0.1-training_plan.{extension}#_best_practices[back to plan])_
+
+
+EJB
+---
+
+NOTE: Don't use Remote EJB if not needed (performance impact!)
+
+* Remote EJB entails serialization/deserialization
+* Prefer local EJB
+
+
+Other advices
+-------------
+
+* -> use caches for slow services
+* set your timeouts!
+* use async services if you can
+* use connections/clients pool
+* consider using a circuit breaker
+ https://en.wikipedia.org/wiki/Circuit_breaker_design_pattern
+
+
+Caching
+-------
+
+NOTE: Avoid using any custom-made cache.
+
+* There are potential issues with caches (stuck threads, memory leaks)
+* Use only recommended out-of-the-shelf solution (RB has approved usage of Inifinispan for local caches)
+* Discuss it with solution board
+* Do not use a HashMap to share information between several threads:
+** you cannot make it synchronized (see above, <<_concurrency,Concurrency>>)
+** and, when it's not synchronized, there is a risk of infinite loop with Java version < 8 (http://bugs.java.com/view_bug.do?bug_id=7027300) (see also, for example, https://dzone.com/articles/java-7-hashmap-vs)
 
 
 :numbered!:
