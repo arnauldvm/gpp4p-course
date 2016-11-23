@@ -38,7 +38,7 @@ Other useful source of information:
 Introduction
 ------------
 
-These recommendations apply to JEE development.
+These recommendations apply mostly (but not only) to Jave EE development.
 
 *****
 IMPORTANT: Do-not-reinvent-the-wheel
