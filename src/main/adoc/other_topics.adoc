@@ -2,7 +2,6 @@
 ifdef::env-build[:icons: font]
 
 
-http://www.javaperformancetuning.com/tips/rawtips.shtml
 
 
 * Most frequent sources of performance issues
