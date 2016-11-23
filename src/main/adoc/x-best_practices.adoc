@@ -6,7 +6,9 @@ v0.1, 21-Nov-2016: First version
 :backend: slidy
 //:theme: volnitsky
 :data-uri:
-:icons:
+ifdef::env-build[:icons: font]
+:extension: adoc
+//extension may be overriden by compile.sh
 :copyright: Creative-Commons-Zero (Arnauld Van Muysewinkel)
 
 

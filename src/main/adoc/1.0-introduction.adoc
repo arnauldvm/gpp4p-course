@@ -6,6 +6,9 @@ v0.1, 21-Nov-2016: Draft version
 :backend: slidy
 //:theme: volnitsky
 :data-uri:
+ifdef::env-build[:icons: font]
+:extension: adoc
+//extension may be overriden by compile.sh
 :copyright: Creative-Commons-Zero (Arnauld Van Muysewinkel)
 
 Content
