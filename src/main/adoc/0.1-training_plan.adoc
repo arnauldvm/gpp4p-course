@@ -20,20 +20,20 @@ Introduction
 Preamble
 --------
 
-* Computer architecture
-* Performance improvement process
+* link:2.1-computer_architecture.html#_content[Computer architecture]
+* link:2.2-process.html#_content[Performance improvement process]
 
 
 Best practices
 --------------
 
-* Memory, Objects lifecycle
-* Persistence, Database
-* Remote services
-* I/Os (disk...)
-* Threads, contentions
-* CPU
-* Architecture (?)
+* link:3.1-memory.html#_content[Memory, Objects lifecycle]
+* link:3.2-persistence.html#_content[Persistence, Database]
+* link:3.3-services.html#_content[Remote services]
+* link:3.4-io.html#_content[I/Os (disk...)]
+* link:3.5-contentions.html#_content[Contentions (threads, locks...)]
+* link:3.6-cpu.html#_content[CPU]
+* link:3.7-architecture.html#_content[Architecture] (?)
 
 
 Workshop
