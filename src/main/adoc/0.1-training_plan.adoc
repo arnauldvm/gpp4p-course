@@ -7,7 +7,6 @@ v0.1, 21-Nov-2016: First complete version
 //:theme: volnitsky
 :data-uri:
 :copyright: Creative-Commons-Zero (Arnauld Van Muysewinkel)
-:br: pass:[<br>]
 
 
 Introduction

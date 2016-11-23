@@ -7,7 +7,6 @@ v0.1, 21-Nov-2016: Draft version
 //:theme: volnitsky
 :data-uri:
 :copyright: Creative-Commons-Zero (Arnauld Van Muysewinkel)
-:tld: pass:[~]
 
 Content
 -------

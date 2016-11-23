@@ -8,7 +8,6 @@ v0.1, 21-Nov-2016: First version
 :data-uri:
 :icons:
 :copyright: Creative-Commons-Zero (Arnauld Van Muysewinkel)
-:br: pass:[<br>]
 
 
 Content
@@ -103,7 +102,7 @@ NOTE: ViewState server-side vs. client-side
 JSF: Viewstate
 --------------
 
-* Longer story:{br}
+* Longer story: +
 If you decide using a JSF Viewstate client-side, balance this decision with all the drawbacks of it: bandwidth, security, additional layers to avoid leaks, etc.
 * More specifically, read this:
  
