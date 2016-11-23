@@ -16,7 +16,7 @@ Content
 
 * introduction to the course
 
-_(link:0.1-training_plan.html#_introduction[back to course plan])_
+_(link:0.1-training_plan.{extension}#_introduction[back to course plan])_
 
 
 Introduction to the course

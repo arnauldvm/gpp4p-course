@@ -15,27 +15,27 @@ ifdef::env-build[:icons: font]
 Introduction
 ------------
 
-* link:0.0-course_description.html#_content[Course description]
-* link:1.0-introduction.html#_content[Introduction]
-* link:1.1-objectives.html#_content[Objectives]
+* link:0.0-course_description.{extension}#_content[Course description]
+* link:1.0-introduction.{extension}#_content[Introduction]
+* link:1.1-objectives.{extension}#_content[Objectives]
 
 Preamble
 --------
 
-* link:2.1-computer_architecture.html#_content[Computer architecture]
-* link:2.2-process.html#_content[Performance improvement process]
+* link:2.1-computer_architecture.{extension}#_content[Computer architecture]
+* link:2.2-process.{extension}#_content[Performance improvement process]
 
 
 Best practices
 --------------
 
-* link:3.1-memory.html#_content[Memory, Objects lifecycle]
-* link:3.2-persistence.html#_content[Persistence, Database]
-* link:3.3-services.html#_content[Remote services]
-* link:3.4-io.html#_content[I/Os (disk...)]
-* link:3.5-contentions.html#_content[Contentions (threads, locks...)]
-* link:3.6-cpu.html#_content[CPU]
-* link:3.7-architecture.html#_content[Architecture] (?)
+* link:3.1-memory.{extension}#_content[Memory, Objects lifecycle]
+* link:3.2-persistence.{extension}#_content[Persistence, Database]
+* link:3.3-services.{extension}#_content[Remote services]
+* link:3.4-io.{extension}#_content[I/Os (disk...)]
+* link:3.5-contentions.{extension}#_content[Contentions (threads, locks...)]
+* link:3.6-cpu.{extension}#_content[CPU]
+* link:3.7-architecture.{extension}#_content[Architecture] (?)
 
 
 Workshop
