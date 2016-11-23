@@ -14,9 +14,91 @@ ifdef::env-build[:icons: font]
 Content
 -------
 
+* <<jsf,JSF>>
+* <<_out_of_scope,Out-of-scope>>
 
 _(link:0.1-training_plan.{extension}#_best_practices[back to plan])_
 
+
+[[jsf]]
+JSF: ui:debug
+-------------
+
+NOTE: Remove +<ui:debug hotkey="i"/>+
+
+* Tip: use +rendered="#{initParam['javax.faces.PROJECT_STAGE'] eq 'Development'}"+
+* _Example: in Publiato session size 3Mb -> 500kB_
+
+JSF: Viewstate
+--------------
+
+NOTE: reduce length of navigation history to reduce size of view state
+
+
+JSF: Viewstate
+--------------
+
+NOTE: ViewState server-side vs. client-side
+
+.In "web.xml"
+-----
+<context-param>
+<param-name>javax.faces.STATE_SAVING_METHOD</param-name>
+<param-value>server/client</param-value>
+</context-param>
+-----
+
+* The short story:
+** *server*: if few users, avoids too big HTML pages
+** *client*: reduces session size in server memory
+
+*Caution*: client-side is the default setup in a Smals project!
+
+
+JSF: Viewstate
+--------------
+
+* Longer story: +
+If you decide using a JSF Viewstate client-side, balance this decision with all the drawbacks of it: bandwidth, security, additional layers to avoid leaks, etc.
+* More specifically, read this:
+
+*****
+[quote,"JSF ViewState upside-down" (http://www.synacktiv.fr/ressources/JSF_ViewState_InYourFace.pdf)]
+_____
+It is highly recommended to think twice before using a client side ViewState. If for some reasons you need it, here is a checklist you may want to follow:
+
+* Always validate the scope of Java objects. It is not recommended to use the scope @ViewScoped, because it is often the source of information leaks.
+* Use the keyword transient on attributes you do not want to store in the ViewState. It will prevent their serialization.
+* Always encrypt the ViewState and use an integrity check mechanism if the implementation supports it.
+* Never trust the data contained in a ViewState. Consider they have been potentially tampered by a user. So, you must check them carefully to prevent the attacks previously described.
+
+For security reasons, server side storage is highly recommended.
+http://www.synacktiv.fr/ressources/JSF_ViewState_InYourFace.pdf[>>>]
+_____
+*****
+
+
+JSF: DTO
+--------
+
+NOTE: Use DTO's in the component tree, not JPA entities!
+
+pass:[...] to make sure only really needed data is kept (beware of all "rubbish" loaded by JPA!)
+
+
+JSF: Identifiers
+----------------
+
+NOTE: Don't let JSF autogenerate elements identifiers (+j_idtXXX+),
+
+to facilitate the maintenance of tests scripts (whether jmeter or Selenium)
+
+
+Out-of-scope
+------------
+
+* java fat clients performance (AWT, Swing, JavaFX...)
+* client-side webapp performance (see https://github.com/arnauldvm/wpt-course[WPT] course)
 
 :numbered!:
 That's all folks!
