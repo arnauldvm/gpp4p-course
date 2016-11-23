@@ -1,3 +1,7 @@
+:data-uri:
+ifdef::env-build[:icons: font]
+
+
 http://www.javaperformancetuning.com/tips/rawtips.shtml
 
 * Computer architecture
