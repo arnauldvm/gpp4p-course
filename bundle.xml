@@ -14,11 +14,20 @@
   </plugin>
   <plugin class="org.pdfsam.plugin.merge.GUI.MergeMainGUI" name="Merge/Extract">
     <filelist>
-      <file name="/Users/avm/prj/gpp4p/course/target/pdf/0-extra/0-course_description.pdf" pageselection="All"/>
-      <file name="/Users/avm/prj/gpp4p/course/target/pdf/1-intro/0-introduction.pdf" pageselection="All"/>
-      <file name="/Users/avm/prj/gpp4p/course/target/pdf/0-extra/1-training_plan.pdf" pageselection="All"/>
-      <file name="/Users/avm/prj/gpp4p/course/target/pdf/1-intro/1-objectives.pdf" pageselection="All"/>
-      <file name="/Users/avm/prj/gpp4p/course/target/pdf/0-extra/4-best_practices.pdf" pageselection="All"/>
+      <file name="/Users/avm/prj/gpp4p/course/target/pdf/0.0-course_description.pdf" pageselection="All"/>
+      <file name="/Users/avm/prj/gpp4p/course/target/pdf/0.1-training_plan.pdf" pageselection="All"/>
+      <file name="/Users/avm/prj/gpp4p/course/target/pdf/1.0-introduction.pdf" pageselection="All"/>
+      <file name="/Users/avm/prj/gpp4p/course/target/pdf/1.1-objectives.pdf" pageselection="All"/>
+      <file name="/Users/avm/prj/gpp4p/course/target/pdf/2.1-hardware.pdf" pageselection="All"/>
+      <file name="/Users/avm/prj/gpp4p/course/target/pdf/2.2-process.pdf" pageselection="All"/>
+      <file name="/Users/avm/prj/gpp4p/course/target/pdf/3.1-memory.pdf" pageselection="All"/>
+      <file name="/Users/avm/prj/gpp4p/course/target/pdf/3.2-persistence.pdf" pageselection="All"/>
+      <file name="/Users/avm/prj/gpp4p/course/target/pdf/3.3-services.pdf" pageselection="All"/>
+      <file name="/Users/avm/prj/gpp4p/course/target/pdf/3.4-io.pdf" pageselection="All"/>
+      <file name="/Users/avm/prj/gpp4p/course/target/pdf/3.5-contentions.pdf" pageselection="All"/>
+      <file name="/Users/avm/prj/gpp4p/course/target/pdf/3.6-cpu.pdf" pageselection="All"/>
+      <file name="/Users/avm/prj/gpp4p/course/target/pdf/3.7-architecture.pdf" pageselection="All"/>
+      <file name="/Users/avm/prj/gpp4p/course/target/pdf/3.8-presentation.pdf" pageselection="All"/>
     </filelist>
     <destination value="/Users/avm/prj/gpp4p/course/target/pdf/gpp4p-bundle.pdf"/>
     <overwrite value="true"/>
