@@ -10,11 +10,40 @@ v0.1, 21-Nov-2016: First complete version
 :br: pass:[<br>]
 
 
-TODO
+Introduction
+------------
+
+* link:0.0-course_description.html#_content[Course description]
+* link:1.0-introduction.html#_content[Introduction]
+* link:1.1-objectives.html#_content[Objectives]
+
+Preamble
+--------
+
+* Computer architecture
+* Performance improvement process
 
 
-JPT
----
+Best practices
+--------------
+
+* Memory, Objects lifecycle
+* Persistence, Database
+* Remote services
+* I/Os (disk...)
+* Threads, contentions
+* CPU
+* Architecture (?)
+
+
+Workshop
+--------
+
+* Micro-profiling
+
+
+Other courses
+-------------
 
 "Java Performance Tuning"
 
@@ -22,30 +51,15 @@ JPT
 * Performance Diagnostic model
 * Performance testing process
 
-
-WPT
----
-
 "Web Performance Tuning"
 
 * Web front-end performance
 
 
-Presentations
--------------
+That's all folks!
+-----------------
 
-* link:1.0-introduction.html#_content[Introduction]
-* link:1.1-objectives.html#_content[Objectives]
-* link:x-best_practices.html#_content[Best Practices]
-
-
-Workshops
----------
-
-* 
-
-
-Extras
-------
-
-* 
+[cols="^",grid="none",frame="none"]
+|=====
+|image:../thats-all-folks.png[link="#(1)"]
+|=====
