@@ -14,7 +14,7 @@ Content
 
 * introduction to the course
 
-_(link:0-training_plan.html#_presentations[back to course plan])_
+_(link:0.0-training_plan.html#_presentations[back to course plan])_
 
 
 Introduction to the course
@@ -28,5 +28,5 @@ That's all folks!
 
 [cols="^",grid="none",frame="none"]
 |=====
-|image:./thats-all-folks.png[link="#(1)"]
+|image:images/thats-all-folks.png[link="#(1)"]
 |=====

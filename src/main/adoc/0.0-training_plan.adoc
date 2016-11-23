@@ -34,9 +34,9 @@ WPT
 Presentations
 -------------
 
-* link:1-introduction.html#_content[Introduction]
-* link:1-objectives.html#_content[Objectives]
-* link:2-best_practices.html#_content[Best Practices]
+* link:1.0-introduction.html#_content[Introduction]
+* link:1.1-objectives.html#_content[Objectives]
+* link:x-best_practices.html#_content[Best Practices]
 
 
 Workshops
