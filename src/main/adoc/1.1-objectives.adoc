@@ -14,7 +14,7 @@ Content
 
 * objectives of the course
 
-_(link:0.0-training_plan.html#_presentations[back to course plan])_
+_(link:0.1-training_plan.html#_presentations[back to course plan])_
 
 
 Objectives of the course
