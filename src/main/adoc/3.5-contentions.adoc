@@ -8,6 +8,9 @@ v0.1, 23-Nov-2016: Draft version
 ifdef::env-build[:icons: font]
 :extension: adoc
 //extension may be overriden by compile.sh
+ifeval::["{extension}"!="pdf"]
+:lastpage: {lastpage}
+endif::[]
 :copyright: Creative-Commons-Zero (Arnauld Van Muysewinkel)
 
 Content
@@ -84,4 +87,4 @@ http://www.javaperformancetuning.com/tips/synchronization.shtml
 * use async I/O if you can
 
 
-include::lastpage.adoc.include[]
+include::{lastpage}[]
