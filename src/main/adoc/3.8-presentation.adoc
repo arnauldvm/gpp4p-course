@@ -1,6 +1,6 @@
 // build_options: 
-Good Programming Practices for Performance - Presentation
-=========================================================
+Presentation
+============
 Arnauld Van Muysewinkel <avm@pendragon.be>
 v0.1, 23-Nov-2016: Draft version
 :backend: slidy
@@ -9,6 +9,7 @@ ifdef::env-build[:icons: font]
 :extension: adoc
 //extension may be overriden by compile.sh
 ifeval::["{extension}"!="pdf"]
+:doctitle: Good Programming Practices for Performance - {doctitle}
 :lastpage: {lastpage}
 endif::[]
 :copyright: Creative-Commons-Zero (Arnauld Van Muysewinkel)

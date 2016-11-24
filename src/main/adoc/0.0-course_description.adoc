@@ -1,7 +1,12 @@
-Good Programming Practices for Performance - Course description
-===============================================================
+Course description
+==================
 Arnauld Van Muysewinkel <avm@pendragon.be>
 v0.1, 23-Nov-2016: Initial version, adapted for public use
+:extension: adoc
+//extension may be overriden by compile.sh
+ifeval::["{extension}"!="pdf"]
+:doctitle: Good Programming Practices for Performance - {doctitle}
+endif::[]
 
 
 Target audience
