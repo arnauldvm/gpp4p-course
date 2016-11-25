@@ -30,6 +30,7 @@
       <file name="/Users/avm/prj/gpp4p/course/target/pdf/3.6-cpu.pdf" pageselection="All"/>
       <file name="/Users/avm/prj/gpp4p/course/target/pdf/3.7-architecture.pdf" pageselection="All"/>
       <file name="/Users/avm/prj/gpp4p/course/target/pdf/3.8-presentation.pdf" pageselection="All"/>
+      <file name="/Users/avm/prj/gpp4p/course/target/pdf/w1-microprofiling.pdf" pageselection="All"/>
     </filelist>
     <destination value="/Users/avm/prj/gpp4p/course/target/pdf/gpp4p-bundle.pdf"/>
     <overwrite value="true"/>

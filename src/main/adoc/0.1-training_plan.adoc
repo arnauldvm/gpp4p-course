@@ -47,7 +47,7 @@ Best practices
 Workshop
 --------
 
-* Micro-profiling
+* link:w1-microprofiling.{extension}#_content[Micro-profiling]
 
 
 Other courses
