@@ -26,4 +26,12 @@ Assignment
 ----------
 
 
+Prerequisites
+-------------
+
+WARNING: Use a 32 bit JVM
+
+CAUTION: Don't run on battery!
+
+
 include::{lastpage}[]
