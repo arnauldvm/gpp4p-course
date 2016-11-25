@@ -34,4 +34,34 @@ WARNING: Use a 32 bit JVM
 CAUTION: Don't run on battery!
 
 
+Xprof
+-----
+
+How to interpret Xprof output:
+// TODO: To be summarized
+
+[quote,http://stackoverflow.com/questions/32083547/explanation-of-java-xprof-output]
+_____
+Interpreted + native:: This figure shows the ticks used by the JVM while executing interpreted methods. The extra (+native) columns shows the native C methods that were called by these interpreted methods.
+Compiled + native:: This figure shows the ticks used by the methods that were already parsed by the JIT compiler. After running your program a while, most of your major consumers from the interpreted section should appear as "Compiled" as JIT will compile them.
+Stubs + native:: This figure is for JNI calls. This will likely to use the "native" column only as JNI is of course executed as a series of native calls.
+Thread-local ticks:: This is listed as "miscellaneous" other entries and was written somewhere that "should not raise concerns from performance optimization perspective". I am not sure how much we want to trust that, but XProf is really not a documented tool just as you stated above.
+
+http://stackoverflow.com/a/32087981[(link)]
+_____
+
+[quote,https://github.com/jruby/jruby/wiki/Output-of-JVM-Sampling-Profiler]
+_____
+The +Interpreted+ section indicates code running in the JVM's interpreter, i.e. code that the JVM has not yet jitted. If you see more samples here than in the +Compiled+ section, it's likely that the JVM has decided that method is too troublesome to JIT. That would be a problem to investigate...but otherwise, this section can mostly be ignored.
+
+The +Compiled+ section indicates code that has transitioned to native code via the JVM's JIT. This is where most interesting profile results live. The top items will be the ones to investigate or report to the JRuby team.
+
+The +Stub+ section is for methods in the JVM that appear to be normal Java methods, but which are actually calls out to a native stub or a native snippit of code. Usually you won't care about this section, unless it dominates the sample counts.
+
+The +native+ column in each section indicates the number of samples spent servicing a native call from the method shown. [line-through]#These numbers usually will not be very high and usually will not be important.#
+
+https://github.com/jruby/jruby/wiki/Output-of-JVM-Sampling-Profiler[(link)]
+_____
+
+
 include::{lastpage}[]
