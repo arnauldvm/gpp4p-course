@@ -1,0 +1,30 @@
+// build_options: 
+Just-In-Time compiler (JIT)
+===========================
+Arnauld Van Muysewinkel <avm@pendragon.be>
+v0.1, 25-Nov-2016: Draft version
+:backend: slidy
+:data-uri:
+ifdef::env-build[:icons: font]
+:extension: adoc
+//extension may be overriden by compile.sh
+ifeval::["{extension}"!="pdf"]
+:doctitle: Good Programming Practices for Performance - {doctitle}
+:lastpage: {lastpage}
+endif::[]
+:copyright: Creative-Commons-Zero (Arnauld Van Muysewinkel)
+
+Content
+-------
+
+*
+
+_(link:0.1-training_plan.{extension}#_preamble[back to plan])_
+
+
+Xxxxxxxxxxxx
+------------
+
+
+
+include::{lastpage}[]

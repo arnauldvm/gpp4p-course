@@ -27,6 +27,7 @@ Preamble
 
 * link:2.1-hardware.{extension}#_content[Computer architecture]
 * link:2.2-process.{extension}#_content[Performance improvement process]
+* link:2.3-jit.{extension}#_content[Just-In-Time compiler (JIT)]
 
 
 Best practices
