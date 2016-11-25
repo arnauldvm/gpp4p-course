@@ -10,7 +10,7 @@ ifdef::env-build[:icons: font]
 //extension may be overriden by compile.sh
 ifeval::["{extension}"!="pdf"]
 :doctitle: Good Programming Practices for Performance - {doctitle}
-:lastpage: {lastpage}
+:lastpage: lastpage.adoc.include
 endif::[]
 :copyright: Creative-Commons-Zero (Arnauld Van Muysewinkel)
 
