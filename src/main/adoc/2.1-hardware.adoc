@@ -123,8 +123,17 @@ ILP: Pipelining
 
 * a CPU instruction takes more than 1 clock tick (_clk_) to execute
 * a typical RISC instruction requires 4 to 10 sequential steps, e.g.: +
-+fetch+ > +decode+ > +read+ > +execute+
++fetch+ > +decode+ > +execute+ > +store+
+
+image::images/pipelining-notpipelined.png[]
+
 * => it's possible to start the instruction +n+1+ once the instruction +n+ is in the second step
+
+image::images/pipelining-pipelined.png[]
+
+
+ILP: Pipelining
+---------------
 
 * the more instructions running in //, the higher the _throughput_
 * but the _latency_ (total duration of an instruction) does not increase
