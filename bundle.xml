@@ -22,14 +22,14 @@
       <file name="/Users/avm/prj/gpp4p/course/target/pdf/2.2-hardware.pdf" pageselection="All"/>
       <file name="/Users/avm/prj/gpp4p/course/target/pdf/2.3-jit.pdf" pageselection="All"/>
       <file name="/Users/avm/prj/gpp4p/course/target/pdf/2.4-oracle_db.pdf" pageselection="All"/>
-      <file name="/Users/avm/prj/gpp4p/course/target/pdf/3.1-memory.pdf" pageselection="All"/>
-      <file name="/Users/avm/prj/gpp4p/course/target/pdf/3.2-persistence.pdf" pageselection="All"/>
-      <file name="/Users/avm/prj/gpp4p/course/target/pdf/3.3-services.pdf" pageselection="All"/>
+      <file name="/Users/avm/prj/gpp4p/course/target/pdf/3.1-cpu.pdf" pageselection="All"/>
+      <file name="/Users/avm/prj/gpp4p/course/target/pdf/3.2-contentions.pdf" pageselection="All"/>
+      <file name="/Users/avm/prj/gpp4p/course/target/pdf/3.3-memory.pdf" pageselection="All"/>
       <file name="/Users/avm/prj/gpp4p/course/target/pdf/3.4-io.pdf" pageselection="All"/>
-      <file name="/Users/avm/prj/gpp4p/course/target/pdf/3.5-contentions.pdf" pageselection="All"/>
-      <file name="/Users/avm/prj/gpp4p/course/target/pdf/3.6-cpu.pdf" pageselection="All"/>
-      <file name="/Users/avm/prj/gpp4p/course/target/pdf/3.7-architecture.pdf" pageselection="All"/>
-      <file name="/Users/avm/prj/gpp4p/course/target/pdf/3.8-presentation.pdf" pageselection="All"/>
+      <file name="/Users/avm/prj/gpp4p/course/target/pdf/3.5-services.pdf" pageselection="All"/>
+      <file name="/Users/avm/prj/gpp4p/course/target/pdf/3.6-persistence.pdf" pageselection="All"/>
+      <file name="/Users/avm/prj/gpp4p/course/target/pdf/3.7-presentation.pdf" pageselection="All"/>
+      <file name="/Users/avm/prj/gpp4p/course/target/pdf/3.8-architecture.pdf" pageselection="All"/>
       <file name="/Users/avm/prj/gpp4p/course/target/pdf/w1-microprofiling.pdf" pageselection="All"/>
     </filelist>
     <destination value="/Users/avm/prj/gpp4p/course/target/pdf/gpp4p-bundle.pdf"/>
