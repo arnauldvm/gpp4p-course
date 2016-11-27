@@ -46,7 +46,7 @@ Von Neuman architecture
 * *CU* with _instruction register_ and _program counter_
 * *ALU* with _process registers_
 * *CPU* = CU + ALU
-| image:images/Von_Neumann_architecture.svg-500px.png[width="350"]
+| image:images/Von_Neumann_architecture.svg-500px.gif[width="350"]
 |=====
 
 
