@@ -13,18 +13,86 @@ ifeval::["{extension}"!="pdf"]
 :lastpage: lastpage.adoc.include
 endif::[]
 :copyright: Creative-Commons-Zero (Arnauld Van Muysewinkel)
+:tld: ~
 
 Content
 -------
 
-*
+* <<_bytecode_interpretation,Bytecode interpretation>>
+* <<_hotspot_profiler,HotSpot profiler>>
+* <<_compilation_threshold,Compilation threshold>>
+* <<_code_cache,Code cache>>
+* <<_optimizations,Optimizations>>
+* <<_managed_pointers,Managed pointers>>
 
 _(link:0.1-training_plan.{extension}#_preamble[back to plan])_
 
+// https://www.safaribooksonline.com/library/view/java-performance-the/9781449363512/ch04.html
 
-Xxxxxxxxxxxx
-------------
+Bytecode interpretation
+-----------------------
 
+* JVM translates byte code to specific machine native code
+* first executions of a code block are interpreted
+
+
+HotSpot profiler
+----------------
+
+* instrument the code with counters
+* to find "hot spots" in the code (yet the name!)
+* counters are periodically decayed! +
+(=> won't grow if code not executed frequently enough) +
+(decay factor may be tuned)
+
+
+Compilation threshold
+---------------------
+
+* JIT compilation triggered only after a given threshold
+** +-client+: 1500 iterations +
+-> reduce startup delays, more premature and quicker compilation with less statistical data
+** +-server+: 10,000 iterations +
+-> takes more time before compiling, but deeper optimization and backed by more statistical data
+** may be changed by a command line option
+
+How is this mode determined?
+
+* 32 bits:
+** command line option
+** or by default: +-server+ if >= 2 cores && >= 2GB RAM
+* 64 bits:
+** as of now: always +-server+ (+-client+ option is ignored!)
+
+
+Code cache
+----------
+
+* Compiled code is placed in native code cache
+* May be invalidated at some point (=> code cache fragmentation)
+* Size may be tuned
+
+
+Optimizations
+-------------
+
+* +-server+ compiler will be more agressive
+* method inlining (limited to a certain size! (35 byte codes))
+* code reshaping, branch prediction, loop invariants
+* escape analysis -> allocate object on stack if it does not 'escape' the method
+* ...
+* (patterns depend on the target CPU)
+
+CAUTION: might be disabled by debugger or profiler! +
+Prevents from properly identify bottlenecks!
+
+
+Managed pointers
+----------------
+
+* size of a reference (or OOP: Ordinary Object Pointer): 32 or 64 bits
+* => 64bits JVM use more memory ({tld}50%) and is slower ({tld}10%)
+* -> +-XX:+UseCompressedOops+: most OOPs are represented with 32bits
 
 
 include::{lastpage}[]
