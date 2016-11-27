@@ -18,9 +18,8 @@ Content
 -------
 
 * <<_transactions,Transactions>>
-* <<_jpa,JPA>>
+* <<jpa,JPA>>
 * <<sql,SQL>>
-* <<_other_advices,Other advices>>
 
 _(link:0.1-training_plan.{extension}#_best_practices[back to plan])_
 
@@ -59,15 +58,29 @@ Transactions
 |=====
 
 
-JPA
----
+Transactions
+------------
 
-NOTE: Make sure you manually disabled all (shared) caching (L2 cache)
-
-in persistence.xml (! default for eclipselink is to enable the shared cache)
+NOTE: Use optimistic transactions
 
 
-NOTE: Carefully tune LAZY vs. EAGER
+[[jpa]]
+JPA: Caching
+------------
+
+[WARNING]
+=====
+Shared caching (L2 cache) must be disabled at Smals +
+-> check +persistence.xml+ (! default for eclipselink is to enable the shared cache)
+
+Even though it can impact performance negatively!
+=====
+
+
+JPA: Fetch strategies
+---------------------
+
+NOTE: Carefully tune +FetchType+: LAZY vs. EAGER.
 
 FYI: defaults:
 
@@ -76,42 +89,55 @@ FYI: defaults:
 
 _Example: in Publiato session size 500kB -> 250 kB because of PDF attachment uselessly retrieved by JPA_
 
+* Avoid loading too much data on one end (-> prefer LAZY)
+* While avoiding too many queries on the other end (-> prefer EAGER)
 
-JPA
----
-
-NOTE: Fetch when necessary, if necessary
+-> use fetch joins with LAZY relations to avoid additional queries
 
 
-NOTE: Use (native) queries when retrieving only tiny pieces of data
+JPA: Queries
+------------
 
-pass:[...] to avoid loading whole object tree when only
+NOTE: Use (native) queries when retrieving only tiny pieces of data +
+pass:[...] to avoid loading whole object tree when only a part of the information is required
 
 _Example: in ePV response time 20s -> 1s because a big object tree was loaded in LAZY mode, just to retrieve one integer_
 
 
-NOTE: Make sure your data model does not imply O(n) or O(n2) performance
+NOTE: Use bulk mode when updating many entities. +
+(Use +CriteriaBuilder+/+CriteriaUpdate+ or +CriteriaDelete+.)
 
-
-JPA
----
+JPA: Entity lifecycle
+---------------------
 
 image:images/introduction-to-jpa-and-hibernate-including-examples-37-638.jpg[]
 http://www.slideshare.net/ecosio/introduction-to-jpa-and-hibernate-using
 
 
-JPA
----
+JPA: Entity lifecycle
+---------------------
 
-NOTE: merge != persist != save
+* merge != persist != save
+** +merge()+: Merge the state of the given entity into the current persistence context.
+The initial entity is not tracked, the new entity is tracked.
+** +persist()+: Make an instance managed and persistent.
+The entity state is tracked.
+** Tracked entity is saved to DB only when Tx is committed
+* avoid: flush, refresh
+** +flush()+: Synchronize the persistence context to the underlying database. +
+Premature queries, potentially useless.
+** +refresh()+: Refresh the state of the instance from the database, overwriting changes made to the entity, if any. +
+Why would you do that? Better refactor your business logic.
 
-NOTE: avoid: flush, refresh
+
+JPA: Data model
+---------------
+
+Optimize your JPA model
 
 NOTE: bidirectional relationships must be maintained manually
 
-NOTE: use fetch joins to avoid additional queries
-
-NOTE: carefully choose the correct join type
+WARNING: Make sure your data model does not imply O(n) or O(n2) performance
 
 
 [[sql]]
@@ -169,14 +195,6 @@ SQL: Other advices
 // http://howtodoinjava.com/core-java/jdbc/best-practices-to-improve-jdbc-performance/
 // http://www.javaperformancetuning.com/tips/rawtips.shtml >> http://www.as400.ibm.com/developer/java/topics/jdbctips.html
 // http://www.javaperformancetuning.com/tips/jdbc_prepared.shtml
-
-
-Other advices
--------------
-
-* avoid useless fetches from DB (beware of ORM)
-* optimize your JPA model
-* Use optimistic transactions
 
 
 include::{lastpage}[]
