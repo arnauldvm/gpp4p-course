@@ -102,5 +102,6 @@ Out-of-scope
 
 * java fat clients performance (AWT, Swing, JavaFX...)
 * client-side webapp performance (see https://github.com/arnauldvm/wpt-course[WPT] course)
+** (Single page webapps are preferable, as far as performance is concerned.)
 
 include::{lastpage}[]
