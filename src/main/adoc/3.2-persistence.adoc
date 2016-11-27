@@ -28,18 +28,35 @@ _(link:0.1-training_plan.{extension}#_best_practices[back to plan])_
 Transactions
 ------------
 
-NOTE: Choose carefully the transaction type
+NOTE: Choose carefully the Jave EE transaction type
 
 Transaction attribute type can have one of the following values:
 
-* +Required+
-* +RequiresNew+
-* +Mandatory+
-* +NotSupported+
-* +Supports+
-* +Never+
+* +Required+: The existing transaction is re-used.
+If there is no existing transaction, a new one is created.
+* +RequiresNew+: The container must invoke the enterprise bean method with a new transaction context.
+The already existing transaction (if any) is suspended.
+* +Mandatory+: If there is no existing transaction, an exception is thrown.
+* +NotSupported+: The already existing transaction (if any) is suspended.
+The enterprise bean method is invoked without transaction.
+* +Supports+: The existing transaction (if any) is re-used.
+Else the enterprise bean method is invoked without transaction.
+* +Never+: The client is required to call without a transaction context, otherwise an exception is thrown
+The enterprise bean method is invoked without transaction.
 
 See http://docs.oracle.com/javaee/6/api/javax/ejb/TransactionAttributeType.html[Javadoc]
+
+
+Transactions
+------------
+
+[cols="<2,6*^"]
+|=====
+>h|                   type: h| Required        h| RequiresNew h| Mandatory h| NotSupported h| Supports      h| Never
+| No transaction exists      | OK               | OK           | exception  | OK            | OK             | OK
+| Transaction already exists | OK               | suspended    | mandatory  | suspended     | OK             | exception
+| New transaction context    | create or re-use | create       | re-use     | none          | none or re-use | none
+|=====
 
 
 JPA
