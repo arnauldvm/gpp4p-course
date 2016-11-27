@@ -21,7 +21,7 @@ Content
 * <<_sql_optimizers,SQL optimizers>>
 * <<_execution_plan,Execution plan>>
 
-_(link:0.1-training_plan.{extension}#_preamble[back to plan])_
+_(link:0.1-training_plan.{extension}#_preamble_middleware[back to plan])_
 
 
 SQL statement processing

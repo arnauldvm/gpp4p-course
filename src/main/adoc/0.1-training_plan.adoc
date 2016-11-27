@@ -22,12 +22,18 @@ Introduction
 * link:1.0-introduction.{extension}#_content[Introduction]
 * link:1.1-objectives.{extension}#_content[Objectives]
 
-Preamble
---------
+
+Preamble: Infrastructure
+------------------------
 
 * link:2.1-process.{extension}#_content[Performance improvement process]
 * link:2.2-hardware.{extension}#_content[Computer architecture]
 * link:2.3-jit.{extension}#_content[Just-In-Time compiler (JIT)]
+
+
+Preamble: Middleware
+--------------------
+
 * link:2.4-oracle_db.{extension}#_content[Oracle Database]
 
 
