@@ -13,6 +13,8 @@ ifeval::["{extension}"!="pdf"]
 :lastpage: lastpage.adoc.include
 endif::[]
 :copyright: Creative-Commons-Zero (Arnauld Van Muysewinkel)
+:tld: ~
+:ne: &#8800;
 
 Content
 -------
@@ -24,7 +26,7 @@ Content
 ** <<first_era,First era: CISC>>
 ** <<second_era,Second era: Frequency scaling>>
 ** <<third_era,Third era: multi-cores>>
-* <<_topics,Topics>>
+* <<_typical_latencies,Typical latencies>>
 
 _(link:0.1-training_plan.{extension}#_preamble[back to plan])_
 
@@ -158,7 +160,7 @@ The Xeon family of CPUs have a 31 stages pipeline.
 Out-of-order execution
 ----------------------
 
-* reading data from cache is *very slow*
+* reading data from cache is slower than 1 clk
 * rather than waiting for the data, the CPU starts executing next instructions
 * CPU could even completely change the order of execution
 (several instructions being _prefetched_ in the instructions queue)
@@ -169,10 +171,12 @@ image::images/out-of-order_execution.png[width="700"]
 Branch prediction
 -----------------
 
-* if the data is used for conditional branching, the CPU _predicts_ the branch,
-and continues execution (even though the actual data is not yet known)
+* if the data required for deciding a conditional branch is not yet arrived,
+the CPU _predicts_ the branch, and continues the execution
+(even though the actual data is not yet known)
 * if the branch was mis-predicted, it must "clean the mess"
-* good prediction 95% of the time
+(and lose time)
+* prediction is good 95% of the time
 
 
 TLP: Multi-threading
@@ -200,28 +204,105 @@ TLP: Multi-threading
 * gain limited by the contention on shared resources (caches, memory bus)
 * depends a lot on the application:
 ** +none+ for pure calculation (no idle slots)
-** theoretically up to +x 2+ for pure memory access (for 2 threads HT) (practically {tilde}30%)
+** theoretically up to +x 2+ for pure memory access (for 2 threads HT) (practically {tld}30%)
 
 
 Cache levels
 ------------
 
+* memory speed does not increase as fast as CPU
 
-The wall
---------
+image::images/cpu_vs_dram.png[width="700"]
+
+* now, fetching from memory can take 100s of +clk+
+* -> multilevel caches
+
+
+Cache levels
+------------
+
+* L1, L2 caches per core
+* L3 cache shared between all cores
+
+image::images/cache_2web.png[width="700"]
+
+
+Cache levels
+------------
+
+* Memory: cheap and slow DRAM
+* Caches: expensive and fast SRAM
+* caches are smaller => closer (! speed of light)
+** 3 cm = 0.333ns = 1 clk (@ 3GHz)
+** actually:
++
+[cols="4*^",width="70%"]
+|=====
+| Registers |      L1     |      L2      |      RAM
+| <1 clk    | {tld}3 clks | {tld}15 clks | {tld}200 clks
+|=====
+
+CAUTION: Even if cache misses are rare (<5%),
+the cost is so high that they dominate the performance
+
+
+Cache levels
+------------
+
+* data transferred at once by small blocks called "lines"
+* 1 cache line is typically 64 bytes (Intel) +
+  (= 32 shorts = 16 ints = 8 longs = 8 to 16 references)
+* => best to address consecutive data (already fetched in the cache)
+
+Moreover:
+
+* same piece of data may be present in 2 separate L1 caches
+(possibly with {ne} values!)
+* => need to synchronize (takes time!)
+
+http://www.aristeia.com/TalkNotes/ACCU2011_CPUCaches.pdf
+
+
+The walls
+---------
+
+Power:: can't melt the CPU!
+ILP:: branch prediction has its limits
+memory:: becomes the dominant of programs performance
+speed of light:: 1 clk = 3 cm @10Ghz
 
 
 [[third_era]]
 Third era: multi-cores
 ----------------------
 
+* more cores, but not faster
+* we must adapt our way of programming
 
-Topics
-------
+CAUTION: Data access patterns are now the key for good performance.
 
-* typical latencies
-image:typical_latencies/pydata-paris-2015-closing-keynote-francesc-alted-16-638.jpg[]
- https://gist.github.com/hellerbarde/2843375
+
+Typical latencies
+-----------------
+
+image::images/pydata-paris-2015-closing-keynote-francesc-alted-16-638.jpg[width="700"]
+
+https://gist.github.com/hellerbarde/2843375
+
+
+Typical latencies
+-----------------
+
+image::images/latencies_2016.png[width="700"]
+
+
+Typical latencies
+-----------------
+
+image::images/latencies_2000.png[width="700"]
+
+https://people.eecs.berkeley.edu/~rcs/research/interactive_latency.html +
+or https://github.com/colin-scott/interactive_latencies
 
 
 include::{lastpage}[]
