@@ -2,7 +2,7 @@
 Computer architecture
 =====================
 Arnauld Van Muysewinkel <avm@pendragon.be>
-v0.1, 23-Nov-2016: Draft version
+v0.1, 27-Nov-2016: Draft version
 :backend: slidy
 :data-uri:
 ifdef::env-build[:icons: font]
