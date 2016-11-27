@@ -1,6 +1,6 @@
 // build_options: 
-Presentation
-============
+Presentation layer
+==================
 Arnauld Van Muysewinkel <avm@pendragon.be>
 v0.1, 23-Nov-2016: Draft version
 :backend: slidy
