@@ -110,8 +110,8 @@ Performance is gained by:
   based on prediction algorithms
 ** ILP (Instruction Level Parallelism)
 ** Out-of-order execution, Branch prediction
+** TLP (Thread Level Parallelism)
 ** Multiple cache levels
-** Hyper-threading
 
 Prediction algorithms require simpler instructions,
 which is made possible by bigger memories.
@@ -170,8 +170,32 @@ and continues execution (even though the actual data is not yet known)
 * good prediction 95% of the time
 
 
-Hyper-threading
----------------
+TLP: Multi-threading
+--------------------
+
+* requires several sets of register
+* we spare the time required for the context-switching
+** -> TMT: Temporal multi-threading
+** only one thread at a time
+
+* we may also use the slots lost waiting for the memory
+** -> SMT: Simultaneous multi-threading, a.k.a. hyper-threading or HT (Intel)
+** several instructions from different threads are mixed at the same time in the pipeline
+
+
+TLP: Multi-threading
+--------------------
+
+image::images/slide_36.jpg[width="700"]
+
+
+TLP: Multi-threading
+--------------------
+
+* gain limited by the contention on shared resources (caches, memory bus)
+* depends a lot on the application:
+** +none+ for pure calculation (no idle slots)
+** theoretically up to +x 2+ for pure memory access (for 2 threads HT) (practically {tilde}30%)
 
 
 Cache levels
