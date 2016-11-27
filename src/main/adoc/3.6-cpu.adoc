@@ -17,23 +17,26 @@ endif::[]
 Content
 -------
 
-* <<_other_advices,Other advices>>
+_(CPU related issues are more frequent for high responsive systems, like trading systems)_
+
+* <<collections,Collections implementations>>
+* <<algorithms,Algorithms implementations>>
+* <<_optimization,Optimization>>
+* <<slow,Things that hurt performance>>
 
 _(link:0.1-training_plan.{extension}#_best_practices[back to plan])_
 
 
-Other advices
--------------
+[[collections]]
+Collections implementations
+---------------------------
 
-_(Less frequent sources of performance issues)_
-
-* don't use exceptions as return values / for control flow!
-* choose your collections implementations carefully
+Choose your collections implementations carefully +
  http://java-performance.info/java-collections-overview/ :
-+
-[cols="h,a,a"]
+
+[options="header",cols="<h1,2*<3a"]
 |=====
-| {nbsp} | Single threaded | Concurrent
+| {nbsp} ^| Single threaded ^| Concurrent
 | Lists	|
 * +ArrayList+ – generic array-based
 * +LinkedList+ – do not use
@@ -73,18 +76,39 @@ _(Less frequent sources of performance issues)_
 * +ConcurrentSkipListSet+ – sorted concurrent set
 * +CopyOnWriteArraySet+ – seldom updated, often traversed
 |=====
+
+
+[[algorithms]]
+Algorithms implementations
+--------------------------
+
 * choose your algorithms carefully (e.g. sort...)
 * use market proof algorithms implementations
+* avoid polling
+
+
+Optimization
+------------
+
 * know how your CPU work (e.g. cache levels)
-* favor inlining by the JIT (...)
+* keep your class small (ideally should fit on one cache line, i.e. 64 bytes)
+* favor inlining by the JIT, by keeping methods small
+* getters/setters may hurt (if not inlined)
 * replace Lists and Strings by arrays
+* prefer StringBuilder over String.format
+
+
+[[slow]]
+Things that hurt performance
+----------------------------
+
 * cryptography is slow
 * XML parsing is slow
 * serializing/deserializing is slow
 * creating a regexp is slow
-* prefer StringBuilder over String.format
-* avoid polling
-* getters/setters may hurt (if not inlined)
+* don't use exceptions as return values / for control flow!
+** building a stack trace is extremely slow
+
 
 
 include::{lastpage}[]
