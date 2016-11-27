@@ -53,7 +53,7 @@ NOTE: Avoid using any custom-made cache.
 * Use only recommended out-of-the-shelf solution (RB has approved usage of Inifinispan for local caches)
 * Discuss it with solution board
 * Do not use a HashMap to share information between several threads:
-** you cannot make it synchronized (see above, <<_concurrency,Concurrency>>)
+** you should not make it synchronized (see section link:3,5-contentions.{extension}#jee[Contentions] about Java EE constraintes)
 ** and, when it's not synchronized, there is a risk of infinite loop with Java version < 8 (http://bugs.java.com/view_bug.do?bug_id=7027300) (see also, for example, https://dzone.com/articles/java-7-hashmap-vs)
 
 
