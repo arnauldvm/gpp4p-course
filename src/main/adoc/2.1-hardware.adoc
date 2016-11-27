@@ -118,8 +118,10 @@ which is made possible by bigger memories.
 Hence the transition towards "RISC" CPU architecture.
 
 
-ILP: Pipelining
----------------
+ILP: Instructions pipelining
+----------------------------
+
+(a.k.a. Superscalar processors)
 
 * a CPU instruction takes more than 1 clock tick (_clk_) to execute
 * a typical RISC instruction requires 4 to 10 sequential steps, e.g.: +
@@ -132,8 +134,8 @@ image::images/pipelining-notpipelined.png[]
 image::images/pipelining-pipelined.png[]
 
 
-ILP: Pipelining
----------------
+ILP: Instructions pipelining
+----------------------------
 
 * the more instructions running in //, the higher the _throughput_
 * but the _latency_ (total duration of an instruction) does not increase
