@@ -109,6 +109,7 @@ Performance is gained by:
 * more complex architectures,
   based on prediction algorithms
 ** ILP (Instruction Level Parallelism)
+** Out-of-order execution, Branch prediction
 ** Multiple cache levels
 ** Hyper-threading
 
@@ -149,21 +150,32 @@ The Xeon family of CPUs have a 31 stages pipeline.
 =====
 
 
-ILP: Branch prediction
+Out-of-order execution
 ----------------------
 
+* reading data from cache is *very slow*
+* rather than waiting for the data, the CPU starts executing next instructions
+* CPU could even completely change the order of execution
+(several instructions being _prefetched_ in the instructions queue)
 
-ILP: Prefetching
-----------------
+image::images/out-of-order_execution.png[width="700"]
 
 
+Branch prediction
+-----------------
 
-Cache levels
-------------
+* if the data is used for conditional branching, the CPU _predicts_ the branch,
+and continues execution (even though the actual data is not yet known)
+* if the branch was mis-predicted, it must "clean the mess"
+* good prediction 95% of the time
 
 
 Hyper-threading
 ---------------
+
+
+Cache levels
+------------
 
 
 The wall
