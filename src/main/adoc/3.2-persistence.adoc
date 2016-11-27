@@ -114,7 +114,6 @@ NOTE: Generally speaking, avoid creating your requests dynamicaly
 SQL
 ---
 
-image::images/cncpt250.gif[]
 
 
 Other advices

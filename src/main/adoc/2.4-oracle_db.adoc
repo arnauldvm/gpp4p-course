@@ -17,14 +17,53 @@ endif::[]
 Content
 -------
 
-*
+* <<_sql_statement_processing,SQL statement processing>>
+* <<_sql_optimizers,SQL optimizers>>
+* <<_execution_plan,Execution plan>>
 
 _(link:0.1-training_plan.{extension}#_preamble[back to plan])_
 
 
-Xxxxxxxxxxxx
-------------
+SQL statement processing
+------------------------
 
+image::images/query-optimisation-7-638.png[width="700"]
+
+
+SQL statement processing
+------------------------
+
+image::images/cncpt250.gif[width="350"]
+
+
+SQL optimizers
+--------------
+
+* CBO (Cost-Base Optimizer) is better than RBO (Rule-Based Optimizer)
+* but CBO requires statistics -> rebuild periodically
+
+Modes:
+
+* ALL_ROWS: best throughput
+* FIRST_ROWS: fast response
+
+
+Execution plan
+--------------
+
+Based on WHERE clause.
+
+Either 1 step:
+
+* FULL TABLE SCAN -> reads the whole table
+
+or 2 steps:
+
+* INDEX UNIQUE SCAN -> retrieve a single rowid from index
+* INDEX RANGE SCAN -> retrieve one or several rowids from index
+* INDEX FAST FULL SCAN -> if the CBO estimates that a large portion of the index will be returned
+
++ TABLE ACCESS BY INDEX ROWID
 
 
 include::{lastpage}[]
