@@ -20,7 +20,7 @@ Content
 * <<_logging_issues,Logging issues>>
 * <<_other_advices,Other advices>>
 
-_(link:0.1-training_plan.{extension}#_best_practices[back to plan])_
+_(link:0.1-training_plan.{extension}#_best_practices_infrastructure[back to plan])_
 
 
 Logging issues

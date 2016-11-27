@@ -37,13 +37,18 @@ Preamble: Middleware
 * link:2.4-oracle_db.{extension}#_content[Oracle Database]
 
 
-Best practices
---------------
+Best practices: Infrastructure
+------------------------------
 
 * link:3.1-cpu.{extension}#_content[CPU]
 * link:3.2-contentions.{extension}#_content[Contentions (threads, locks...)]
 * link:3.3-memory.{extension}#_content[Memory, Objects lifecycle]
 * link:3.4-io.{extension}#_content[I/Os (disk...)]
+
+
+Best practices: Middleware
+--------------------------
+
 * link:3.5-services.{extension}#_content[Remote services]
 * link:3.6-persistence.{extension}#_content[Persistence, Database]
 * link:3.7-presentation.{extension}#_content[Presentation layer (JSF)]

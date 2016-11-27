@@ -24,7 +24,7 @@ _(CPU related issues are more frequent for high responsive systems, like trading
 * <<_optimization,Optimization>>
 * <<slow,Things that hurt performance>>
 
-_(link:0.1-training_plan.{extension}#_best_practices[back to plan])_
+_(link:0.1-training_plan.{extension}#_best_practices_infrastructure[back to plan])_
 
 
 [[collections]]

@@ -23,7 +23,7 @@ Content
 * <<_messaging,Messaging>>
 * <<_blocking_resources,Blocking resources>>
 
-_(link:0.1-training_plan.{extension}#_best_practices[back to plan])_
+_(link:0.1-training_plan.{extension}#_best_practices_infrastructure[back to plan])_
 
 // http://www.javaperformancetuning.com/tips/synchronization.shtml
 
