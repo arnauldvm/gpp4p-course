@@ -17,10 +17,52 @@ endif::[]
 Content
 -------
 
+* <<rate,Reduce allocation rate>>
+* <<fragmentation,Avoid memory fragmentation>>
+* <<stack,Use stack rather than heap>>
+* <<gc,Avoid losing time with the GC>>
 * <<_sessions,Sessions>>
-* <<_other_advices,Other advices>>
 
 _(link:0.1-training_plan.{extension}#_best_practices[back to plan])_
+
+
+[[rate]]
+Reduce allocation rate
+----------------------
+
+* useless allocation/deallocation: try to re-use objects -> consider using object pools
+* big objects in memory (e.g. file transfer -> use streaming)
+* avoid allocating objects in loops when they can be allocated only once before the loop
+
+
+[[fragmentation]]
+Avoid memory fragmentation
+--------------------------
+
+* prefer StringBuilder over '+' or String.format
+* allocate collections/buffers/builders with appropriate initialCapacity
+
+
+[[stack]]
+Use stack rather than heap
+--------------------------
+
+* prefer local variables over class variables
+
+
+[[gc]]
+Avoid losing time with the GC
+-----------------------------
+
+* reduce memory pressure
+** chase memory leaks
+** keep your sessions small, or better: prefer session-less designs
+** use SoftReference for long-lived objects
+* don't +System.gc()+
+* difficult: balance memory used vs. performance
+** E.g.: reduce session scope as much as possible => more DB requests!
+
+_See also https://github.com/arnauldvm/jpt-course[JPT] course_
 
 
 Sessions
@@ -33,23 +75,6 @@ NOTE: Sessions must be serializable:
 * Use DTO's
 
 Actually, the potential issues are the same as for JSF ViewContext.
-
-
-Other advices
--------------
-
-* _See also https://github.com/arnauldvm/jpt-course[JPT] course_
-* useless allocation/deallocation: try to re-use objects -> consider using object pools
-* big objects in memory (e.g. file transfer -> use streaming)
-* chase memory leaks
-* use SoftReference for long-lived objects
-* difficult: balance memory used vs. performance
-** E.g.: reduce session scope as much as possible => more DB requests!
-* prefer local variables over class variables
-* don't +System.gc()+
-* prefer StringBuilder over '+' or String.format
-* allocate collections/buffers/builders with appropriate initialCapacity
-* avoid allocating objects in loops
 
 
 include::{lastpage}[]
