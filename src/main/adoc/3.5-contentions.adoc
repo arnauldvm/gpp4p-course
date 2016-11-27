@@ -19,9 +19,13 @@ Content
 
 * <<_general_recommendations,General Recommendations>>
 * <<jee,Thread management in Java EE>>
-* <<_other_advices,Other advices>>
+* <<_synchronization,Synchronization>>
+* <<_messaging,Messaging>>
+* <<_blocking_resources,Blocking resources>>
 
 _(link:0.1-training_plan.{extension}#_best_practices[back to plan])_
+
+// http://www.javaperformancetuning.com/tips/synchronization.shtml
 
 
 General recommendations
@@ -71,21 +75,30 @@ _____
 *****
 
 
-Other advices
--------------
-
-http://www.javaperformancetuning.com/tips/synchronization.shtml
+Synchronization
+---------------
 
 * avoid synchronization as much as possible -> consider "Lock-Free (or Lockless) Programming"
  http://preshing.com/20120612/an-introduction-to-lock-free-programming/
 ** never use +synchronized(this)+
-* even using +volatile+ may be slow
+* even using +volatile+ may be slow (because of L1/L2 cache invalidation)
 * beware of Concurrent structures
 * avoid using thread safe classes when not required (e.g. prefer StringBuilder over StringBuffer)!
+
+
+Messaging
+---------
+
 * *never* use "exactly-once" QoS for messaging, use:
 ** at-most-once if you can afford losing messages
 ** at-least-once (+ message numbering) otherwise
+
+
+Blocking resources
+------------------
+
 * use async I/O if you can
+* DB calls are blocking too!
 
 
 include::{lastpage}[]
