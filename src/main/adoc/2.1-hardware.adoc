@@ -21,6 +21,9 @@ Content
 * <<von_neumann,Von Neuman architecture>>
 * <<moores_law,Moore's Law?>>
 * <<_3_phases,3 phases of CPU improvement>>
+** <<first_era,First era: CISC>>
+** <<second_era,Second era: Frequency scaling>>
+** <<third_era,Third era: multi-cores>>
 * <<_topics,Topics>>
 
 _(link:0.1-training_plan.{extension}#_preamble[back to plan])_
@@ -87,6 +90,7 @@ The previous diagrams show 3 phases in the race for performance:
 * multicore
 
 
+[[first_era]]
 First era: CISC
 ---------------
 
@@ -98,6 +102,7 @@ First era: CISC
 Performance is gained by making instructions more complex, yet "CISC"
 
 
+[[second_era]]
 Second era: Frequency scaling
 -----------------------------
 
@@ -206,6 +211,7 @@ The wall
 --------
 
 
+[[third_era]]
 Third era: multi-cores
 ----------------------
 
