@@ -17,24 +17,54 @@ endif::[]
 Content
 -------
 
-* <<_other_topics,Other topics>>
+* <<_process,Process>>
 
 _(link:0.1-training_plan.{extension}#_preamble[back to plan])_
 
 
-Other topics
-------------
-
-Performance improvement process (see JPT)
+General recommendations
+-----------------------
 
 * no premature optimization
-* have a performance objective
-* concentrate of the 20% of the app that is responsible for 80% of the load
+* must have a performance objective
+* should have a workbench (performance test)
+* "80-20": concentrate of the 20% of the app that is responsible for 80% of the load
 * one issue often hides other issues
-* first actions might not show any improvement. Yet, don't despair!
+* first actions might not show any improvement. +
+Yet, don't despair!
+
+
+Improvement process
+-------------------
+
+_(Reminder from JPT course.)_
+
+* run test
+* measure
+* if performance objective not reached:
+** analyse results, look for:
+*** first OS contentions,
+*** then GC issues,
+*** then code optimization
+** fix (one at a time!
+** iterate (-> run test) (-> run test)
+
+
+Performance test
+----------------
+
+_(Reminder from JPT course.)_
+
+Test data::
+* quantity
+* properly randomized
+
+Test harness::
+* properly isolated
 * test in real-life conditions (DB size, # simultaneous users, server sizing...)
-* OS contention, then GC issues, then code optimization
-* ...
+
+Test scenario, load profiles::
+* representative of the issue
 
 
 include::{lastpage}[]
