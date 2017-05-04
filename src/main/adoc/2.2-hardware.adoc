@@ -126,6 +126,11 @@ which is made possible by bigger memories.
 Hence the transition towards "RISC" CPU architecture.
 
 
+[[third_era]]
+Third era: Multicore
+--------------------
+
+
 ILP: Instructions pipelining
 ----------------------------
 
