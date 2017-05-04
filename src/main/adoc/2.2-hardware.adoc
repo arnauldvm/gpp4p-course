@@ -96,6 +96,8 @@ The previous diagrams show 3 phases in the race for performance:
 First era: CISC
 ---------------
 
+{tilde}1960->{tilde}1985
+
 * memories are small
 * must avoid swapping
 * code must be compact
@@ -107,6 +109,8 @@ Performance is gained by making instructions more complex, yet "CISC"
 [[second_era]]
 Second era: Frequency scaling
 -----------------------------
+
+{tilde}1985->{tilde}2005
 
 Performance is gained by:
 
@@ -129,6 +133,8 @@ Hence the transition towards "RISC" CPU architecture.
 [[third_era]]
 Third era: Multicore
 --------------------
+
+{tilde}2005->...
 
 
 ILP: Instructions pipelining
