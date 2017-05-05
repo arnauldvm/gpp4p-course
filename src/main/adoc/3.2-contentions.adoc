@@ -90,6 +90,8 @@ Failing to do so brings serious risks in your application:
 Synchronization
 ---------------
 
+In any case (Java EE or not):
+
 * avoid synchronization as much as possible -> consider "Lock-Free (or Lockless) Programming"
  http://preshing.com/20120612/an-introduction-to-lock-free-programming/
 ** never use +synchronized(this)+
