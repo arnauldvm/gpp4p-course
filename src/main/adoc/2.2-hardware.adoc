@@ -284,12 +284,12 @@ Third era: multi-cores
 
 * more cores, but not faster
 * New challenges...
-** Amdahl's law
 ** cache invalidation
 ** OS support
 ** applications rewriting
 ** ...
 * we must adapt our way of programming
+* New limit: Amdahl's law
 
 CAUTION: Data access patterns are now the key for good performance.
 
