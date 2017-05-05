@@ -114,19 +114,20 @@ Second era: Frequency scaling
 
 {tilde}1985->{tilde}2005
 
-Performance is gained by:
+Performance is gained by technology improvements:
 
-* technology improvement
-** higher frequencies
-** more transistors by in^2^
-* more complex architectures,
-  based on prediction algorithms
+* higher frequencies
+* more transistors by in^2^
+* increase IPC (Instructions Per Cycle) +
+ -> based on prediction algorithms +
+ -> requires more complex architectures
 ** ILP (Instruction Level Parallelism)
 ** Out-of-order execution, Branch prediction
 ** TLP (Thread Level Parallelism)
 ** Multiple cache levels
 
 Prediction algorithms require simpler instructions,
+hence programs become bigger,
 which is made possible by bigger memories.
 
 Hence the transition towards "RISC" CPU architecture.
