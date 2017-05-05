@@ -130,27 +130,6 @@ which is made possible by bigger memories.
 Hence the transition towards "RISC" CPU architecture.
 
 
-[[third_era]]
-Third era: Multicore
---------------------
-
-{tilde}2005->...
-
-New challenges...
-
-* Amdahl's law
-* cache invalidation
-* OS support
-* applications rewriting
-* ...
-
-
-Amdahl's law
-------------
-
-image::images/AmdahlsLaw.png[width="700"]
-
-
 ILP: Instructions pipelining
 ----------------------------
 
@@ -301,10 +280,24 @@ speed of light:: 1 clk = 3 cm @10Ghz
 Third era: multi-cores
 ----------------------
 
+{tilde}2005->...
+
 * more cores, but not faster
+* New challenges...
+** Amdahl's law
+** cache invalidation
+** OS support
+** applications rewriting
+** ...
 * we must adapt our way of programming
 
 CAUTION: Data access patterns are now the key for good performance.
+
+
+Amdahl's law
+------------
+
+image::images/AmdahlsLaw.png[width="700"]
 
 
 Typical latencies
