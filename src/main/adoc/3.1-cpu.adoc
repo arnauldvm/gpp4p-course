@@ -110,7 +110,7 @@ Algorithms implementations
 --------------------------
 
 * choose your algorithms carefully (e.g. sort...)
-* use market proof algorithms implementations
+* use market proof algorithms implementations (do not re-invent the wheel)
 * avoid polling
 
 
@@ -118,9 +118,10 @@ Optimization
 ------------
 
 * know how your CPU work (e.g. cache levels)
-* keep your class small (ideally should fit on one cache line, i.e. 64 bytes)
+* keep your class data small (ideally should fit on one cache line, i.e. 64 bytes)
 * favor inlining by the JIT, by keeping methods small
-* getters/setters may hurt (if not inlined)
+* getters/setters may hurt (if not inlined) +
+  _(and are often useless)_
 * replace Lists and Strings by arrays
 * prefer StringBuilder over String.format
 
@@ -134,7 +135,7 @@ Things that hurt performance
 * serializing/deserializing is slow
 * creating a regexp is slow
 * don't use exceptions as return values / for control flow!
-** building a stack trace is extremely slow
+** building a stack trace is *extremely* slow
 
 
 
