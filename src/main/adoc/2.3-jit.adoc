@@ -47,7 +47,7 @@ Bytecode interpretation
 HotSpot profiler
 ----------------
 
-* instrument the code with counters
+* instruments the code with counters
 * to find "hot spots" in the code (yet the name!)
 * counters are periodically decayed! +
 (=> won't grow if code not executed frequently enough) +
