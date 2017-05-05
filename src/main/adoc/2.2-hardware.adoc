@@ -133,6 +133,12 @@ which is made possible by bigger memories.
 Hence the transition towards "RISC" CPU architecture.
 
 
+Evolution of IPC
+----------------
+
+image::images/slide_3.jpg[width="700"]
+
+
 ILP: Instructions pipelining
 ----------------------------
 
