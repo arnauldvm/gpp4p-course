@@ -43,6 +43,15 @@ Choose your collections implementations carefully +
 * +Vector+ – deprecated
 |
 * +CopyOnWriteArrayList+ – seldom updated, often traversed
+|=====
+
+
+Collections implementations
+---------------------------
+
+[options="header",cols="<1h,2*<3a"]
+|=====
+| {nbsp} ^| Single threaded ^| Concurrent
 | Queues / deques |
 * +ArrayDeque+ – generic array-based
 * +Stack+ – deprecated
@@ -55,6 +64,15 @@ Choose your collections implementations carefully +
 * +LinkedTransferQueue+ – may transfer elements w/o storing
 * +PriorityBlockingQueue+ – concurrent PriorityQueue
 * +SynchronousQueue+ – Exchanger with Queue interface
+|=====
+
+
+Collections implementations
+---------------------------
+
+[options="header",cols="<1h,2*<3a"]
+|=====
+| {nbsp} ^| Single threaded ^| Concurrent
 | Maps |
 * +HashMap+ – generic map
 * +EnumMap+ – enum keys
@@ -66,6 +84,15 @@ Choose your collections implementations carefully +
 |
 * +ConcurrentHashMap+ – generic concurrent map
 * +ConcurrentSkipListMap+ – sorted concurrent map
+|=====
+
+
+Collections implementations
+---------------------------
+
+[options="header",cols="<1h,2*<3a"]
+|=====
+| {nbsp} ^| Single threaded ^| Concurrent
 | Set |
 * +HashSet+ – generic set
 * +EnumSet+ – set of enums
