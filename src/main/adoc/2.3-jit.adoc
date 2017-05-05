@@ -29,6 +29,14 @@ _(link:0.1-training_plan.{extension}#_preamble_infrastructure[back to plan])_
 
 // https://www.safaribooksonline.com/library/view/java-performance-the/9781449363512/ch04.html
 
+
+Preliminary remark
+------------------
+
+* JIT improves with each version of Java
+* Information given in these slides might not apply to most recent versions of Java
+
+
 Bytecode interpretation
 -----------------------
 
