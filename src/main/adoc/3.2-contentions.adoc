@@ -45,7 +45,7 @@ no Locale.setDefault(), no Locale.getDefault(), no new formatter without passing
 Thread management in Java EE
 ----------------------------
 
-NOTE: Do not use _any_ concurrency control mechanism
+NOTE: Do not use _any_ concurrency control mechanism directly
 
 like:
 
@@ -73,6 +73,18 @@ but control of multithreading is located in the container, not in the enterprise
 http://www.oracle.com/technetwork/java/restrictions-142267.html[>>>]
 _____
 *****
+
+
+Thread management in Java EE
+----------------------------
+
+Use Java EE mechanisms instead (concurrency must be managed _**by** the application server_).
+
+Failing to do so brings serious risks in your application:
+
+* deadlocks
+* too high number of threads (=> high CPU load / big run queue)
+* ...
 
 
 Synchronization
