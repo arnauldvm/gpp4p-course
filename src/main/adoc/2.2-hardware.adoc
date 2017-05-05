@@ -25,7 +25,9 @@ Content
 * <<_3_phases,3 phases of CPU improvement>>
 ** <<first_era,First era: CISC>>
 ** <<second_era,Second era: Frequency scaling>>
+*** Instructions pipelining, Out-of-order execution, Branch prediction, Multi-threading, Cache levels
 ** <<third_era,Third era: multi-cores>>
+*** Amdahl's law
 * <<_typical_latencies,Typical latencies>>
 
 _(link:0.1-training_plan.{extension}#_preamble_infrastructure[back to plan])_
