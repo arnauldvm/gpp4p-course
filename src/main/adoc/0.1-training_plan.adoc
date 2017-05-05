@@ -31,12 +31,6 @@ Preamble: Infrastructure
 * link:2.3-jit.{extension}#_content[Just-In-Time compiler (JIT)]
 
 
-Preamble: Middleware
---------------------
-
-* link:2.4-oracle_db.{extension}#_content[Oracle Database]
-
-
 Best practices: Infrastructure
 ------------------------------
 
@@ -46,6 +40,18 @@ Best practices: Infrastructure
 * link:3.4-io.{extension}#_content[I/Os (disk...)]
 
 
+Workshop
+--------
+
+* link:w1-microprofiling.{extension}#_content[Micro-profiling]
+
+
+Preamble: Middleware
+--------------------
+
+* link:2.4-oracle_db.{extension}#_content[Oracle Database]
+
+
 Best practices: Middleware
 --------------------------
 
@@ -53,12 +59,6 @@ Best practices: Middleware
 * link:3.6-persistence.{extension}#_content[Persistence, Database]
 * link:3.7-presentation.{extension}#_content[Presentation layer (JSF)]
 * link:3.8-architecture.{extension}#_content[Architecture] (?)
-
-
-Workshop
---------
-
-* link:w1-microprofiling.{extension}#_content[Micro-profiling]
 
 
 Other courses
